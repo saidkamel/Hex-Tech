@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1d1f32;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.FronteventController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="599.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/play-n-learn%20web.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/play-learn-and-grow-together-png-7.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="236.0" layoutY="103.0" text="Evénement Disponible" textFill="#00aae8">
+         <font>
+            <Font name="Century Gothic" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="83.0" layoutY="316.0" prefHeight="200.0" prefWidth="612.0">
+        <columns>
+          <TableColumn fx:id="TbNom" prefWidth="75.0" text="Nom" />
+          <TableColumn fx:id="TbType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="TbDateDebut" prefWidth="75.0" text="Date Debut" />
+            <TableColumn fx:id="TbDateFin" prefWidth="111.33334350585938" text="Date fin" />
+            <TableColumn fx:id="TbDescription" prefWidth="133.66665649414062" text="Description" />
+            <TableColumn fx:id="TbNp" prefWidth="140.66665649414062" text="Nombre de participant" />
+        </columns>
+      </TableView>
+      <Button layoutX="15.0" layoutY="115.0" mnemonicParsing="false" onAction="#gotoFrontParent" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #008fd6;" text="Back" textFill="WHITE" />
+      <TextField fx:id="TfRech" layoutX="521.0" layoutY="271.0" onKeyReleased="#TfRecherche" promptText="Recherche" />
+   </children>
+</AnchorPane>

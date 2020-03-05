@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1d1f32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifReclamationController">
+   <children>
+      <Label layoutX="262.0" layoutY="228.0" text="cin" textFill="#008fd6" />
+      <Label layoutX="262.0" layoutY="261.0" text="nom" textFill="#008fd6" />
+      <Label layoutX="262.0" layoutY="286.0" text="prenom" textFill="#008fd6" />
+      <Label layoutX="262.0" layoutY="320.0" text="note" textFill="#008fd6" />
+      <Label layoutX="262.0" layoutY="345.0" text="motif" textFill="#008fd6" />
+      <Label layoutX="245.0" layoutY="372.0" prefHeight="17.0" prefWidth="59.0" text="description" textFill="#008fd6" />
+      <TextField fx:id="Tnote" layoutX="313.0" layoutY="316.0" />
+      <TextField fx:id="Tmotif" layoutX="313.0" layoutY="341.0" />
+      <TextField fx:id="Tdescription" layoutX="313.0" layoutY="368.0" />
+      <Button fx:id="Bvalider" layoutX="410.0" layoutY="442.0" mnemonicParsing="false" onAction="#valider" style="-fx-background-color: #008fd6;" text="valider" textFill="WHITE" />
+      <Label fx:id="Tcin" layoutX="374.0" layoutY="228.0" textFill="#008fd6" />
+      <Label fx:id="Tnom" layoutX="374.0" layoutY="261.0" textFill="#008fd6" />
+      <Label fx:id="Tprenom" layoutX="374.0" layoutY="286.0" textFill="#008fd6" />
+      <Label layoutX="263.0" layoutY="49.0" text="Modifier Réclamation" textFill="#00aae8">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

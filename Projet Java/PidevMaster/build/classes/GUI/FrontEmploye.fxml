@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1d1f32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FrontEmployeController">
+   <children>
+      <Label layoutX="53.0" layoutY="30.0" text="Welcome" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fx:id="imagelogout" fitHeight="77.0" fitWidth="73.0" layoutY="521.0" onMouseClicked="#LogOut" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/exit.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="307.0" layoutY="192.0" text="Email" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="307.0" layoutY="224.0" text="Cin" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="310.0" layoutY="269.0" text="Titre" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="305.0" layoutY="304.0" text="Salaire" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="300.0" layoutY="339.0" text="Absence" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lbnom" layoutX="165.0" layoutY="30.0" text="Label" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lbprenom" layoutX="231.0" layoutY="30.0" text="Label" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lbemail" layoutX="410.0" layoutY="195.0" text="Label" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lbcin" layoutX="410.0" layoutY="227.0" text="Label" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lbtitre" layoutX="413.0" layoutY="272.0" text="Label" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lbsalaire" layoutX="412.0" layoutY="303.0" text="Label" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lbabsence" layoutX="413.0" layoutY="338.0" text="Label" textFill="#008fd6">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="570.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/play-n-learn%20web.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
