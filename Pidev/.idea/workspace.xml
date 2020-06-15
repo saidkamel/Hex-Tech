@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f873ec8f-e060-44c4-8c7b-4c11633766cd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="7ac09858-9159-4058-98d0-afeac807d413" />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/vendor/php-http/guzzle6-adapter" />
+      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/vendor/php-http/httplug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/php-http/stopwatch-plugin" />
+      <path value="$PROJECT_DIR$/vendor/php-http/logger-plugin" />
+      <path value="$PROJECT_DIR$/vendor/hwi/oauth-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
+      <path value="$PROJECT_DIR$/vendor/jms/parser-lib" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/comment-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/kriswallsmith/assetic" />
+      <path value="$PROJECT_DIR$/vendor/symfony/assetic-bundle" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1ZWik3a7mwG0pXKLUBq4EWgLkud" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Pidev\vendor" />
+      <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Resources\views" />
+      <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Repository" />
+      <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Form" />
+      <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Entity" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="c dump-autoload" />
+      <command value="doctrine:mapping:import --force ProjetBundle annotation" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entities" />
+      <command value="s doctrine:generate:entities User" />
+      <command value="s doctrine:generate:entities UserBundle" />
+      <command value="generate:form ProjetBundle:Activite" />
+      <command value="s doctrine:generate:form ProjetBundle:Activite" />
+      <command value="s doctrine:generate:form ProjetBundle:Classe" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:generate:form ProjetBundle:Pediatre" />
+      <command value="s doctrine:generate:entity " />
+      <command value="s doctrine:generate:form ProjetBundle:Profilmedicale" />
+      <command value=" composer require symfony/validator doctrine/annotations" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="composer require knplabs/knp-snappy-bundle" />
+      <command value="c require knplabs/knp-snappy-bundle" />
+      <command value="composer.phar update" />
+      <command value="php composer.phar update" />
+      <command value="composer require symfony/swiftmailer-bundle" />
+      <command value="c require symfony/swiftmailer-bundle" />
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f873ec8f-e060-44c4-8c7b-4c11633766cd" name="Default Changelist" comment="" />
+      <created>1584961390568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584961390568</updated>
+      <workItem from="1584961711144" duration="355000" />
+      <workItem from="1584962098443" duration="12655000" />
+      <workItem from="1585230219229" duration="3486000" />
+      <workItem from="1585389593323" duration="11005000" />
+      <workItem from="1585487242607" duration="8434000" />
+      <workItem from="1585572656555" duration="6088000" />
+      <workItem from="1585615707239" duration="695000" />
+      <workItem from="1585657792224" duration="9279000" />
+      <workItem from="1585753952399" duration="169000" />
+      <workItem from="1585754713801" duration="4642000" />
+      <workItem from="1585796005810" duration="5395000" />
+      <workItem from="1586196871421" duration="600000" />
+      <workItem from="1586198069422" duration="5920000" />
+      <workItem from="1586522031721" duration="1055000" />
+      <workItem from="1586524196890" duration="1450000" />
+      <workItem from="1586706826986" duration="6039000" />
+      <workItem from="1586740057424" duration="204000" />
+      <workItem from="1586781003246" duration="7413000" />
+      <workItem from="1586794718780" duration="1216000" />
+      <workItem from="1586804091137" duration="3129000" />
+      <workItem from="1586852517581" duration="1873000" />
+      <workItem from="1587821230355" duration="20000" />
+      <workItem from="1587823107039" duration="224000" />
+      <workItem from="1588211729886" duration="2720000" />
+      <workItem from="1588247536352" duration="1184000" />
+      <workItem from="1589725291220" duration="2615000" />
+      <workItem from="1589751240344" duration="2006000" />
+      <workItem from="1590498410703" duration="627000" />
+      <workItem from="1590499486366" duration="2777000" />
+      <workItem from="1590675385771" duration="598000" />
+      <workItem from="1590676542170" duration="746000" />
+      <workItem from="1590712586069" duration="1497000" />
+      <workItem from="1590754149072" duration="2750000" />
+      <workItem from="1590845960588" duration="271000" />
+      <workItem from="1590877304591" duration="2086000" />
+      <workItem from="1591054913411" duration="2209000" />
+      <workItem from="1591178177516" duration="1221000" />
+      <workItem from="1591298381261" duration="597000" />
+      <workItem from="1591651434328" duration="2072000" />
+      <workItem from="1591715192568" duration="2909000" />
+      <workItem from="1591830175455" duration="383000" />
+      <workItem from="1592227713602" duration="138000" />
+      <workItem from="1592228628982" duration="10432000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="472" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1585796749369">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="472" y="101" key="#com.intellij.ide.util.MemberChooser/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1585796749369" />
+    <state x="363" y="123" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1590498953536">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="363" y="123" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1590498953536" />
+    <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585394367020">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1585394367020" />
+    <state x="413" y="140" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589752057642">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="140" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1589752057642" />
+    <state x="1770" y="196" key="ComposerCompositePathDialog" timestamp="1584961852572">
+      <screen x="1366" y="-68" width="1366" height="768" />
+    </state>
+    <state x="1770" y="196" key="ComposerCompositePathDialog/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961852572" />
+    <state x="463" y="128" key="FileChooserDialogImpl" timestamp="1592228868038">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="128" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592228868038" />
+    <state x="1829" y="60" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961868891" />
+    <state width="663" height="202" key="GridCell.Tab.0.bottom" timestamp="1590505424055">
+      <screen x="1366" y="-68" width="1366" height="768" />
+    </state>
+    <state width="663" height="202" key="GridCell.Tab.0.bottom/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1590505047900" />
+    <state width="663" height="202" key="GridCell.Tab.0.bottom/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1590505424055" />
+    <state width="663" height="202" key="GridCell.Tab.0.center" timestamp="1590505424055">
+      <screen x="1366" y="-68" width="1366" height="768" />
+    </state>
+    <state width="663" height="202" key="GridCell.Tab.0.center/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1590505047899" />
+    <state width="663" height="202" key="GridCell.Tab.0.center/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1590505424055" />
+    <state width="663" height="202" key="GridCell.Tab.0.left" timestamp="1590505424055">
+      <screen x="1366" y="-68" width="1366" height="768" />
+    </state>
+    <state width="663" height="202" key="GridCell.Tab.0.left/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1590505047899" />
+    <state width="663" height="202" key="GridCell.Tab.0.left/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1590505424055" />
+    <state width="663" height="202" key="GridCell.Tab.0.right" timestamp="1590505424055">
+      <screen x="1366" y="-68" width="1366" height="768" />
+    </state>
+    <state width="663" height="202" key="GridCell.Tab.0.right/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1590505047899" />
+    <state width="663" height="202" key="GridCell.Tab.0.right/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1590505424055" />
+    <state x="500" y="309" key="NewPhpFileDialog" timestamp="1589752435839">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="500" y="309" key="NewPhpFileDialog/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1589752435839" />
+    <state x="184" y="29" key="SettingsEditor" timestamp="1586804183367">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="29" key="SettingsEditor/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1586804183367" />
+    <state x="1550" y="-39" key="SettingsEditor/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961894466" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1585232566291">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="498" height="445" key="SwitcherDM/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1585232566291" />
+    <state x="1816" y="220" key="SymfonyPathDialog" timestamp="1584961879039">
+      <screen x="1366" y="-68" width="1366" height="768" />
+    </state>
+    <state x="1816" y="220" key="SymfonyPathDialog/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961879039" />
+    <state x="1601" y="145" key="com.intellij.ide.util.TipDialog" timestamp="1592228632014">
+      <screen x="1366" y="-68" width="1366" height="768" />
+    </state>
+    <state x="235" y="213" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1591715231116" />
+    <state x="235" y="213" key="com.intellij.ide.util.TipDialog/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592227725421" />
+    <state x="1601" y="145" key="com.intellij.ide.util.TipDialog/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1592228632014" />
+    <state x="423" y="0" width="959" height="755" key="dock-window-1" timestamp="1586201530831">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="423" y="0" width="959" height="755" key="dock-window-1/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1586201530831" />
+    <state x="372" y="108" width="622" height="516" key="find.popup" timestamp="1592232202800">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="372" y="108" width="622" height="516" key="find.popup/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592232202800" />
+    <state x="278" y="47" width="672" height="677" key="run.anything.popup" timestamp="1590505047938">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="278" y="47" width="672" height="677" key="run.anything.popup/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1590505047938" />
+    <state x="1705" y="138" width="672" height="677" key="run.anything.popup/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584962184489" />
+    <state x="346" y="89" key="search.everywhere.popup" timestamp="1585491145287">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" key="search.everywhere.popup/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1585491145287" />
+  </component>
+</project>

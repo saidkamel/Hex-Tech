@@ -1,0 +1,91 @@
+{% extends'base-said.html.twig' %}
+{% block navigation %}
+    <ul class="treeview-menu">
+        <li class="active"><a href="{{ path('show_front') }}"><i class="fa fa-circle-o"></i> Show Profil medicale</a></li>
+
+    </ul>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>CLUB</span>
+            <span class="pull-right-container">
+                        <span class="label label-primary pull-right">3</span>
+            </span>
+        </a>
+
+
+
+
+        <ul class="treeview-menu">
+            <li><a href="{{ path('club_user') }}"><i class="fa fa-circle-o"></i> Consulter les Club </a></li>
+            <li><a href="{{ path('club_subscription') }}"><i class="fa fa-circle-o"></i> S'incrire</a></li>
+            <li><a href="{{ path('user_club') }}"><i class="fa fa-circle-o"></i> Consulter mes Club</a></li>
+        </ul>
+    </li>
+{% endblock %}
+{% block headerTitle %}
+    <section class="content-header">
+        <h1>
+            Détail enfant
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Afficher</li>
+        </ol>
+    </section>
+{% endblock %}
+{% block boxheader %}
+    <div class="box-header">
+        <h3 class="box-title">{{ enfant.nom ~ " " ~ enfant.prenom }}</h3>
+    </div>
+{% endblock %}
+{% block dataTable %}
+
+    <h4><strong>Age: </strong>{{ enfant.getAge() }}</h4>
+    <h4><strong>Taille: </strong>{{ enfant.profilmedicale.taille }}</h4>
+    <h4><strong>Poids: </strong>{{ enfant.profilmedicale.poids }}</h4>
+    <h4><strong>Etat: </strong>{{ enfant.profilmedicale.etat }}</h4>
+    {% set imc= (enfant.profilmedicale.poids/((enfant.profilmedicale.taille*0.01)*(enfant.profilmedicale.taille*0.01) ))|round(2,'floor')  %}
+    <h4><strong>IMC: </strong>{{ imc }} </h4>
+
+   <h4>{% if imc<=18.5 %}
+        {{ " Insuffisance ponderale " }}
+           <h4><strong>CONSEIL: </strong></h4>
+           {{ "Votre poids apparaît très insuffisant en regard de votre taille. Cette maigreur excessive peut être la conséquence d’une maladie ou de troubles du comportement alimentaire, et elle peut aussi être elle-même à l'origine d'autres maladies. Il est utile que vous consultiez un médecin afin qu'il constate l'ampleur de l'insuffisance pondérale et en recherche la cause éventuelle. Il pourra également vous faire une proposition de traitement si nécessaire." }}
+    {% elseif (imc>18.5 and imc <= 25 )%}
+        <strong>{{ " Corpulence Normale :"|upper }}</strong>
+        <h4><strong>CONSEIL: </strong></h4>
+        {{ "vous êtes de corpulence normale, c’est-à-dire que vous n’êtes ni en surpoids, ni maigre. Continuez à manger équilibré, à faire de l’exercice régulièrement : ce mode de vie sain est garant d’une bonne santé, sans oublier la notion de plaisir bien sûr !" }}
+    {% elseif (imc>25 and imc <= 30 )%}
+        {{ " Surpoids " }}
+        <h4><strong>CONSEIL: </strong></h4>
+        {{ "Votre poids apparaît modérément excessif compte tenu de votre taille. Ce surpoids peut augmenter votre risque de maladies, en particulier de troubles cardiaques ou vasculaires et de diabète. Ce risque peut se cumuler avec d'autres, provoqués par le tabagisme, l'hypertension ou le cholestérol.
+Si vous présentez déjà un de ces facteurs de risque, une perte de poids vous sera bénéfique. Une alimentation moins riche en graisses, davantage de fruits et de légumes et une activité physique régulière vous permettront sans doute de retrouver un poids idéal. Votre médecin sera le mieux à même de vous donner les conseils adaptés pour atteindre cet objectif." }}
+    {% elseif (imc>30 and imc <= 35 )%}
+        {{ " Obésité modérée " }}
+        <h4><strong>CONSEIL: </strong></h4>
+        {{ "Votre poids est beaucoup trop important compte tenu de votre taille. Vous souffrez d'obésité, une obésité dite 'modérée' ou de stade 1. Cela signifie que vous êtes exposé à un risque non négligeable d’être victime de maladies cardiaques (infarctus), vasculaires (accident vasculaire cérébral, insuffisance veineuse) ou métaboliques (diabète).
+        Cette obésité peut aussi être à l'origine d'essoufflement, de fatigue, de douleurs dorsales ou articulaires et difficultés psychologiques qui perturbent sérieusement vos activités quotidiennes. Heureusement, même une perte de poids modérée (5 à 10 %) peut avoir un effet positif sur votre santé et votre mental, à condition bien sûr de ne pas reprendre les kilos perdus.
+        Dans cette optique, il serait judicieux de pratiquer tous les jours un peu plus d'activité physique et de réduire la part des graisses dans votre alimentation. En tous cas, une consultation avec votre médecin s'impose, pour qu'il établisse un bilan et envisage avec vous les méthodes de perte de poids les plus adaptées, ainsi que les éventuels traitements possibles." }}
+    {% elseif (imc>35 and imc <= 40 )%}
+        {{ " Obésité sévère " }}
+        <h4><strong>CONSEIL: </strong></h4>
+        {{ "Votre poids est beaucoup trop important compte tenu de votre taille. Vous souffrez d'obésité, une obésité dite 'sévère' ou de stade 2. Cela signifie que vous êtes exposé à un risque important de maladies cardiaques (infarctus), vasculaires (accident vasculaire cérébral, insuffisance veineuse) ou métaboliques (diabète).
+        Cette obésité peut aussi être à l'origine d'essoufflement, de fatigue, de douleurs dorsales ou articulaires et difficultés psychologiques qui perturbent sérieusement vos activités quotidiennes. Une perte de poids s’impose ! Pour vous y encourager, sachez que même une même une perte de poids modérée (5 à 10 %) aura un effet positif sur votre santé et votre mental. Vous en ressentirez immédiatement les effets.
+
+        Dans cette optique, il serait judicieux de pratiquer tous les jours un peu plus d'activité physique et de réduire la part des graisses dans votre alimentation. En tous cas, une consultation avec votre médecin s'impose, pour qu'il établisse un bilan et envisage avec vous les méthodes de perte de poids les plus adaptées, ainsi que les éventuels traitements possibles." }}
+    {% elseif (imc>40 )%}
+        {{ " Obésité morbide ou massive " }}
+       <h4><strong>CONSEIL: </strong></h4>
+        {{ "Votre poids est beaucoup trop important compte tenu de votre taille. Vous souffrez d'obésité, une obésité dite 'sévère' ou de stade 2. Cela signifie que vous êtes exposé à un risque important de maladies cardiaques (infarctus), vasculaires (accident vasculaire cérébral, insuffisance veineuse) ou métaboliques (diabète).
+        Cette obésité peut aussi être à l'origine d'essoufflement, de fatigue, de douleurs dorsales ou articulaires et difficultés psychologiques qui perturbent sérieusement vos activités quotidiennes. Une perte de poids s’impose ! Pour vous y encourager, sachez que même une même une perte de poids modérée (5 à 10 %) aura un effet positif sur votre santé et votre mental. Vous en ressentirez immédiatement les effets.
+
+        Dans cette optique, il serait judicieux de pratiquer tous les jours un peu plus d'activité physique et de réduire la part des graisses dans votre alimentation. En tous cas, une consultation avec votre médecin s'impose, pour qu'il établisse un bilan et envisage avec vous les méthodes de perte de poids les plus adaptées, ainsi que les éventuels traitements possibles." }}
+
+       {% endif %}</h4>
+    <td>
+        <button type="button" class="btn btn-block btn-primary" style="background-color:white;"><a href={{ path('toPDF',{'id': enfant.id }) }}> telecharger comme pdf </a></button>
+    </td>
+
+{% endblock %}

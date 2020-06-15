@@ -1,0 +1,24 @@
+{% extends'base-said.html.twig' %}
+{% block boxheader %}
+    <div class="box-header">
+        <h3 class="box-title">Pédiatre</h3>
+    </div>
+{% endblock %}
+{% block formulaire %}
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Modifier Pédiatre</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        {{ form_start(Form,{'attr': {'novalidate':'novalidate'}}) }}
+
+
+
+
+        {{ form_end(Form) }}
+
+    </div>
+    <!-- /.box -->
+{% endblock %}

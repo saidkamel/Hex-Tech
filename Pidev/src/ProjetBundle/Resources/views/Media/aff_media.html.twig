@@ -1,0 +1,49 @@
+{% extends 'index.html.twig' %}
+{% block container %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title> Events list </title>
+    </head>
+    <body>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title ">Club</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                        <th>Nom Club</th>
+                        <th>img</th>
+                        <th>img1</th>
+                        <th>img2</th>
+                        <th>img3</th>
+
+                        </thead>
+                        <tbody>
+                        {% for media in clubs %}
+                            <tr>
+                                <td>{{ media.Club }}</td>
+                                <td><img src="{{ asset('img/' ~ media.img) }}" height="300px" width="250px"></td>
+                                <td><img src="{{ asset('img/' ~ media.img1) }}" height="300px" width="250px"></td>
+                                <td><img src="{{ asset('img/' ~ media.img2) }}" height="300px" width="250px"></td>
+                                <td><img src="{{ asset('img/' ~ media.img3) }}" height="300px" width="250px"></td>
+                                <td><a href="{{path('media_delete',{'id': media.id })}}"> <button class="btn btn-primary btn-block">delete</button></a> <br></td>
+                                <td><a href="{{path('media_update',{'id': media.id })}}"> <button class="btn btn-primary btn-block">edit</button></a> <br></td>
+                            </tr>
+
+
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </body>
+    </html>
+{% endblock %}
