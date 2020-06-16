@@ -1,0 +1,65 @@
+{% extends 'Homepage.html.twig' %}
+{% block body %}
+    <h3>Envoyer un Mail au participant</h3>
+    <div class="box-body">
+        <table id="doctors" class="table table-bordered table-hover">
+            <thead>
+
+            {{ form_start(form) }}
+            {{ form_end(form) }}
+
+            </thead> </table> </div>
+    <br>
+    <br>
+
+
+    </table>
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Liste des Participants</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="doctors" class="table table-bordered table-hover">
+                    <thead>
+
+                    <tr>
+                        <th>id</th>
+                        <th>nom</th>
+                        <th>prenom</th>
+                        <th>Email</th>
+                        <th>Evenement affécté</th>
+
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+
+                    {% for i in participant %}
+                        <tr>
+                            <td>{{i.id}}</td>
+                            <td>{{i.nomP}}</td>
+                            <td>{{i.prenom}}</td>
+                            <td>{{ i.Email }}</td>
+
+                            <td> {% if i.evenement is empty %}
+                                    pas d'evenement
+                                {% else %}
+                                    {{i.evenement.nomE}}
+
+                                {% endif %}</td>
+                        </tr>
+                    {% endfor %}
+                    </tfoot>
+                </table>
+                <div class="navigation">
+                    {{ knp_pagination_render(participant) }}
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+{% endblock %}

@@ -232,7 +232,7 @@
                         <li><a href="{{ path('Show_Activite') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
                     </ul>
                 </li>
-                <li class=" treeview">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Classe</span>
                         <span class="pull-right-container">
@@ -244,7 +244,7 @@
                         <li><a href="{{ path('Show_Classe') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
                     </ul>
                 </li>
-                <li class=" treeview">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Pediatre</span>
                         <span class="pull-right-container">
@@ -256,7 +256,7 @@
                         <li><a href="{{ path('Show_Pediatre') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
                     </ul>
                 </li>
-                <li class=" treeview">
+                <li class="treeview">
 
                     <ul class="treeview-menu">
                         <li class="active"><a href="{{ path('Add_Profil') }}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
@@ -283,11 +283,41 @@
                 </li>
 
 
-                <li class="treeview">
+                <li class=" treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Evenement</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li class="active"><a href="{{ path('evenement_AjoutE')}}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
+                        <li><a href="{{ path('evenement_AfficherE')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                        <li><a href="{{ path('evenement_RechercheE')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+                        <li><a href="{{ path('evenement_Mail')}}"><i class="fa fa-circle-o"></i> Mail</a></li>
+
+                    </ul>
+                </li>
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class=" treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>Participant</span>
+                            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('evenement_AfficheP')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                            <li><a href="{{ path('evenement_RechercheP')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+                        </ul>
+                    </li>
+
+                    </li>
 
 
 
-            </ul>
+                </ul>
         </section>
         <!-- /.sidebar -->
     </aside>

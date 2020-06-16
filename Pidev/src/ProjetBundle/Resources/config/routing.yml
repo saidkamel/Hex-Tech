@@ -159,3 +159,92 @@ mobile_show_all_sub:
 mobile_show_one_sub:
     path:     /tasks/showonesub/{id}
     defaults: { _controller: ProjetBundle:Club:mobileAfficheroneSub }
+#mondher
+evenement_home:
+    path:     /event
+    defaults: { _controller: ProjetBundle:Default:redirect }
+evenement_Front:
+    path:     /F
+    defaults: { _controller: ProjetBundle:Evenement:Front }
+evenement_AjoutE:
+    path:     /AjoutE
+    defaults: { _controller: ProjetBundle:Evenement:AjoutEvenement }
+evenement_AfficherE:
+    path:     /AfficheE
+    defaults: { _controller: ProjetBundle:Evenement:AfficheEvenement }
+evenement_AfficheP:
+    path:     /AfficheP
+    defaults: { _controller: ProjetBundle:Evenement:AfficheParticipant }
+evenement_SupprimeP:
+    path:     /SupprimeP/{id}
+    defaults: { _controller: ProjetBundle:Evenement:SupprimeParticipant }
+evenement_ModifieP:
+    path:     /ModifieP/{id}
+    defaults: { _controller: ProjetBundle:Evenement:ModifieParticipant }
+evenement_AjoutP:
+    path:     /AjoutP/{id}
+    defaults: { _controller: ProjetBundle:Evenement:AjoutParticipant }
+evenement_SupprimeE:
+    path:     /SupprimeE/{id}
+    defaults: { _controller: ProjetBundle:Evenement:SupprimeEvenement }
+evenement_ModifierE:
+    path:     /ModifieE/{id}
+    defaults: { _controller: ProjetBundle:Evenement:ModifieEvenement }
+evenement_RechercheE:
+    path:     /RechercheE
+    defaults: { _controller: ProjetBundle:Evenement:RechercheEvenement }
+evenement_RechercheP:
+    path:     /RechercheP
+    defaults: { _controller: ProjetBundle:Evenement:RechercheParticipant }
+evenement_Mail:
+    path:     /mail
+    defaults: { _controller: ProjetBundle:Evenement:Mail }
+
+evenement_pdf:
+    path:     /pdf
+    defaults: { _controller: ProjetBundle:Default:pdf }
+evenement_pdf1:
+    path:     /pdf1
+    defaults: { _controller: ProjetBundle:Default:pdf1 }
+
+
+participant_AfficheE:
+    path:     /fAfficheE
+    defaults: { _controller: ProjetBundle:Participant:AfficheEvenement }
+participant_RechercheE:
+    path:     /fRechercheE
+    defaults: { _controller: ProjetBundle:Participant:RechercheEvenement }
+participant_AjoutP:
+    path:     /fAjoutP/{id}
+    defaults: { _controller: ProjetBundle:Participant:AjoutParticipant }
+participant_form:
+    path:     /form
+    defaults: { _controller: ProjetBundle:Participant:form }
+participant_Mail:
+    path:     /mailP
+    defaults: { _controller: ProjetBundle:Participant:Mail }
+
+
+
+all_E:
+    path:     /evenement/all
+    defaults: { _controller: ProjetBundle:Evenement:all }
+all_P:
+    path:     /participant/all
+    defaults: { _controller: ProjetBundle:Participant:all }
+new:
+    path:     /new/{id}
+    defaults: { _controller: ProjetBundle:Evenement:new }
+delete:
+    path:     /delete
+    defaults: { _controller: ProjetBundle:Evenement:delete }
+edit:
+    path:     /participant/edit
+    defaults: { _controller: ProjetBundle:Evenement:edit }
+all_Ev:
+    path:     /evenement/alll
+    defaults: { _controller: ProjetBundle:Participant:alll }
+
+#login:
+ #   path:     /loginM/{username}/{password}
+  #  defaults: { _controller: AppBundle:Mobile:login }

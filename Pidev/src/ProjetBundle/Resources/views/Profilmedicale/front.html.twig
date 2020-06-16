@@ -29,6 +29,20 @@
             <li><a href="{{ path('user_club') }}"><i class="fa fa-circle-o"></i> Consulter mes Club</a></li>
         </ul>
     </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Participant</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="{{ path('participant_AfficheE')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+            <li><a href="{{ path('participant_RechercheE')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+            <li><a href="{{ path('participant_Mail')}}"><i class="fa fa-circle-o"></i> Mail</a></li>
+
+        </ul>
+    </li>
 {% endblock %}
 {% block headerTitle %}
     <section class="content-header">

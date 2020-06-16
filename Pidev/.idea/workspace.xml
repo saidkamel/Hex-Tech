@@ -102,8 +102,8 @@
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/comment-bundle" />
       <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
-      <path value="$PROJECT_DIR$/vendor/kriswallsmith/assetic" />
-      <path value="$PROJECT_DIR$/vendor/symfony/assetic-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZWik3a7mwG0pXKLUBq4EWgLkud" />
@@ -115,16 +115,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ProjetBundle/Resources/views" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Pidev\vendor" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Resources\views" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Repository" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Form" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Entity" />
+      <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Controller" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -150,6 +150,7 @@
       <command value="php composer.phar update" />
       <command value="composer require symfony/swiftmailer-bundle" />
       <command value="c require symfony/swiftmailer-bundle" />
+      <command value="composer require knplabs/knp-paginator-bundle" />
     </option>
   </component>
   <component name="ServiceViewManager">
@@ -217,6 +218,7 @@
       <workItem from="1591830175455" duration="383000" />
       <workItem from="1592227713602" duration="138000" />
       <workItem from="1592228628982" duration="10432000" />
+      <workItem from="1592322809324" duration="11315000" />
     </task>
     <servers />
   </component>
@@ -244,10 +246,10 @@
       <screen x="1366" y="-68" width="1366" height="768" />
     </state>
     <state x="1770" y="196" key="ComposerCompositePathDialog/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961852572" />
-    <state x="463" y="128" key="FileChooserDialogImpl" timestamp="1592228868038">
+    <state x="463" y="128" key="FileChooserDialogImpl" timestamp="1592326200083">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="128" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592228868038" />
+    <state x="463" y="128" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592326200083" />
     <state x="1829" y="60" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961868891" />
     <state width="663" height="202" key="GridCell.Tab.0.bottom" timestamp="1590505424055">
       <screen x="1366" y="-68" width="1366" height="768" />
@@ -296,14 +298,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="423" y="0" width="959" height="755" key="dock-window-1/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1586201530831" />
-    <state x="372" y="108" width="622" height="516" key="find.popup" timestamp="1592232202800">
+    <state x="372" y="108" width="622" height="516" key="find.popup" timestamp="1592327174040">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="372" y="108" width="622" height="516" key="find.popup/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592232202800" />
-    <state x="278" y="47" width="672" height="677" key="run.anything.popup" timestamp="1590505047938">
+    <state x="372" y="108" width="622" height="516" key="find.popup/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592327174040" />
+    <state x="278" y="47" width="672" height="677" key="run.anything.popup" timestamp="1592330404407">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="278" y="47" width="672" height="677" key="run.anything.popup/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1590505047938" />
+    <state x="278" y="47" width="672" height="677" key="run.anything.popup/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592330404407" />
     <state x="1705" y="138" width="672" height="677" key="run.anything.popup/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584962184489" />
     <state x="346" y="89" key="search.everywhere.popup" timestamp="1585491145287">
       <screen x="0" y="0" width="1366" height="768" />

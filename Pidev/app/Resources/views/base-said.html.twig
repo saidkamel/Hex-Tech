@@ -399,6 +399,37 @@
                         <li><a href="{{ path('admin_club') }}"><i class="fa fa-circle-o"></i> Consulter les Inscription </a></li>
                     </ul>
                 </li>
+
+
+                <li class=" treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Evenement</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li class="active"><a href="{{ path('evenement_AjoutE')}}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
+                        <li><a href="{{ path('evenement_AfficherE')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                        <li><a href="{{ path('evenement_RechercheE')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+                        <li><a href="{{ path('evenement_Mail')}}"><i class="fa fa-circle-o"></i> Mail</a></li>
+
+                    </ul>
+                </li>
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class=" treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>Participant</span>
+                            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('evenement_AfficheP')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                            <li><a href="{{ path('evenement_RechercheP')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+                        </ul>
+                    </li>
                     {% endblock %}
                 </li>
 

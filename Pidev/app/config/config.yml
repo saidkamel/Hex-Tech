@@ -83,7 +83,7 @@ fos_user:
     service:
         mailer: fos_user.mailer.twig_swift
     from_email:
-        address: "jardindenfant01@gmail.com"
+        address: "mondhermallek97@gmail.com"
         sender_name: "JardinDenfant"
 
 # Windows configuration
@@ -111,6 +111,8 @@ fos_comment:
         model:
             comment: ProjetBundle\Entity\Comment
             thread: ProjetBundle\Entity\Thread
+
+
 
 
 

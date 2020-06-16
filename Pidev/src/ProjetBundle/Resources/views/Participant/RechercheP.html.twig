@@ -1,0 +1,61 @@
+
+{% extends 'Homepage.html.twig' %}
+{% block body %}
+
+
+    </tr>
+
+    </table>
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Recherche des participants</h3>
+
+                <form method="POST">
+                    <input align="left" type="text" name="nom">
+                    <input align="left" type="submit" value="rechercher">
+                </form>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="doctors" class="table table-bordered table-hover">
+                    <thead>
+
+                    <tr>
+                        <th>id</th>
+                        <th>nom</th>
+                        <th>prenom</th>
+                        <th>Evenement affécté</th>
+                        <th>Modifier</th>
+                        <th>supprimer</th>
+
+
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        {% for i in participant %}
+
+                        <td>{{ i.id }}</td>
+                        <td>{{i.nomP}}</td>
+                        <td>{{i.prenom}}</td>
+                        <td> {% if i.evenement is empty %}
+                                pas d'evenement
+                            {% else %}
+                                {{i.evenement.nomE}}
+                            {% endif %}</td>
+                        <td> <a href="{{ path('evenement_ModifieP',{'id':i.id}) }}"class="btn btn-default btn-sm">Modifier</a></td>
+                        <td> <a href="{{ path('evenement_SupprimeP',{'id':i.id}) }}"  class="btn btn-danger btn-sm">Supprimer</a></td>
+                    </tr>
+                    {% endfor %}
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+{% endblock %}

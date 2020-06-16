@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/Resources/views/Homepage.html.twig" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/Resources/views/HomepageF.html.twig" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/Resources/views/base-mondher.html.twig" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/Resources/views/login.html.twig" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/Resources/views/template.html.twig" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Controller/EvenementController.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Controller/ParticipantController.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Entity/Evenement.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Entity/Participant.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Form/EvenementType.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Form/ParticipantType.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Repository/EvenementRepository.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Repository/ParticipantRepository.php" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/Evenement" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ProjetBundle/Resources/views/Participant" charset="windows-1252" />
+  </component>
+</project>

@@ -1,0 +1,45 @@
+
+{% extends 'HomepageF.html.twig' %}
+{% block body %}
+
+
+    </tr>
+
+    </table>
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Liste des Participants</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="doctors" class="table table-bordered table-hover">
+                    <thead>
+
+                    <tr>
+                        <th>nom</th>
+                        <th>prenom</th>
+                        <th>Participer</th>
+
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        {% for i in participant %}
+
+                        <td>{{i.nomP}}</td>
+                        <td>{{i.prenom}}</td>
+                        <td> <a href="{{ path('participant_AjoutP') }}">Participer</a></td>
+
+                    </tr>
+                    {% endfor %}
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+{% endblock %}
