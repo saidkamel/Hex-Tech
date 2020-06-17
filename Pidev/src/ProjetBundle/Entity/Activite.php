@@ -1,7 +1,7 @@
 <?php
 
 namespace ProjetBundle\Entity;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -25,14 +25,18 @@ class Activite
 
     /**
      * @var string
-     *
+     *  * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Your name cannot contain a number"
+     * )
      * @ORM\Column(name="NomActivite", type="string", length=100, nullable=false)
      */
     private $nomactivite;
 
     /**
      * @var string
-     *
+     * @Assert\Type("string")
      * @ORM\Column(name="Description", type="text", length=65535, nullable=false)
      */
     private $description;
@@ -43,14 +47,16 @@ class Activite
      * @ORM\Column(name="Type", type="string", length=100, nullable=false)
      */
     private $type;
-   /* /**
-     * @ORM\ManyToMany(targetEntity="Classe",mappedBy="Activite")
+    /**
+
      */
-   /* private $classe;
+//* @ORM\ManyToMany(targetEntity="Classe",mappedBy="Activite")
+    private $classe;
+
     public function __construct()
     {
         $this->classe = new ArrayCollection();
-    }*/
+    }
 
     /**
      * @return int

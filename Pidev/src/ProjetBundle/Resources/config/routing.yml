@@ -25,6 +25,30 @@ delete_classe:
 classe_edit:
     path:     /editclasse/{id}
     defaults: { _controller: ProjetBundle:Classe:edit }
+graphePie:
+    path: /chart
+    defaults: { _controller: ProjetBundle:Classe:graph}
+Show_ClasseMob:
+    path:     /showclasseM
+    defaults: { _controller: ProjetBundle:Classe:all }
+newAction:
+    path:     /new
+    defaults: { _controller: ProjetBundle:Activite:new }
+Show_AfficheMob:
+    path:     /showclasseA
+    defaults: { _controller: ProjetBundle:Activite:aff }
+
+toPDF:
+    path:     /pdf
+    defaults: { _controller: ProjetBundle:Activite:toPDF }
+frontClasse:
+    path:     /frontClasse
+    defaults: { _controller: ProjetBundle:Classe:frontClasse }
+show_detailClasse:
+    path:     /show_detailClasse/{id}
+    defaults: { _controller: ProjetBundle:Classe:showdetailClasse }
+
+#said (sante )
 Show_Pediatre:
     path:     /showpediatre
     defaults: { _controller: ProjetBundle:Pediatre:show }
@@ -67,7 +91,7 @@ listes:
 login:
     path:     /profilmedicale/login/{username}/{password}
     defaults: { _controller: ProjetBundle:loginjson:login }
-toPDF:
+toPDFp:
     path:     /pdf/{id}
     defaults: { _controller: ProjetBundle:Profilmedicale:toPDF }
 getOne:

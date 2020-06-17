@@ -118,16 +118,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ProjetBundle/Resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/views" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Pidev\app\Resources\views" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Resources\views" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Controller" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Repository" />
       <recent name="C:\wamp64\www\Pidev\src\ProjetBundle\Form" />
-      <recent name="C:\wamp64\www\Pidev\app\Resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -231,6 +231,7 @@
       <workItem from="1592322809324" duration="11315000" />
       <workItem from="1592393048418" duration="7289000" />
       <workItem from="1592404558326" duration="85000" />
+      <workItem from="1592423240838" duration="1081000" />
     </task>
     <servers />
   </component>
@@ -258,10 +259,10 @@
       <screen x="1366" y="-68" width="1366" height="768" />
     </state>
     <state x="1770" y="196" key="ComposerCompositePathDialog/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961852572" />
-    <state x="463" y="128" key="FileChooserDialogImpl" timestamp="1592393059353">
+    <state x="463" y="128" key="FileChooserDialogImpl" timestamp="1592423388947">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="128" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592393059353" />
+    <state x="463" y="128" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592423388947" />
     <state x="1829" y="60" key="FileChooserDialogImpl/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961868891" />
     <state width="1327" height="202" key="GridCell.Tab.0.bottom" timestamp="1592401636410">
       <screen x="0" y="0" width="1366" height="768" />
@@ -300,11 +301,11 @@
       <screen x="1366" y="-68" width="1366" height="768" />
     </state>
     <state x="1816" y="220" key="SymfonyPathDialog/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1584961879039" />
-    <state x="235" y="213" key="com.intellij.ide.util.TipDialog" timestamp="1592404560683">
+    <state x="235" y="213" key="com.intellij.ide.util.TipDialog" timestamp="1592423241418">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="235" y="213" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1591715231116" />
-    <state x="235" y="213" key="com.intellij.ide.util.TipDialog/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592404560683" />
+    <state x="235" y="213" key="com.intellij.ide.util.TipDialog/1366.-68.1366.768/0.0.1366.768@0.0.1366.768" timestamp="1592423241418" />
     <state x="1601" y="145" key="com.intellij.ide.util.TipDialog/1366.-68.1366.768/0.0.1366.768@1366.-68.1366.768" timestamp="1592228632014" />
     <state x="423" y="0" width="959" height="755" key="dock-window-1" timestamp="1586201530831">
       <screen x="0" y="0" width="1366" height="768" />

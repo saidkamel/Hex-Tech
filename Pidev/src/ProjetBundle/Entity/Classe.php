@@ -28,15 +28,16 @@ class Classe
      * @ORM\Column(name="NomClasse", type="string", length=100, nullable=false)
      */
     private $nomclasse;
-   /* /**
+    /**
      * @ORM\ManyToMany(targetEntity="Activite",inversedBy="Classe")
      * @ORM\JoinTable(name="ClasseJoinActivite")
      */
-   /* private $activite;
+    private $activite;
+
     public function __construct()
     {
         $this->activite = new ArrayCollection();
-    }*/
+    }
 
     /**
      * @return int
@@ -70,21 +71,21 @@ class Classe
         $this->nomclasse = $nomclasse;
     }
 
-   /* /**
+    /**
      * @return ArrayCollection
      */
-  /*  public function getActivite()
+    public function getActivite()
     {
         return $this->activite;
     }
 
- /*   /**
+    /**
      * @param ArrayCollection $activite
      */
-  /*  public function setActivite($activite)
+    public function setActivite($activite)
     {
         $this->activite = $activite;
-    }*/
+    }
 
 }
 

@@ -2,11 +2,15 @@
 
 namespace ProjetBundle\Controller;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use ProjetBundle\Entity\Classe;
 use ProjetBundle\Form\ClasseType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 
 class ClasseController extends Controller
@@ -22,13 +26,19 @@ class ClasseController extends Controller
         return $this->render('@Projet/Classe/showclasse.html.twig',array(
             'classe'=> $classe));
     }
-
- /*public function showbyIdAction($id){
-        $em= $this->getDoctrine()->getManager();
-        $car =$em->getRepository('TestBundle:car')->find($id);
-        return $this->render('@Test/Default/showcarbyid.html.twig',array(
-            'car'=> $car));
-    }*/
+    public function allAction()
+    {
+        $event = $this->getDoctrine()->getManager()->getRepository('ProjetBundle:Classe')->findAll();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($event);
+        return new JsonResponse($formatted);
+    }
+    /*public function showbyIdAction($id){
+           $em= $this->getDoctrine()->getManager();
+           $car =$em->getRepository('TestBundle:car')->find($id);
+           return $this->render('@Test/Default/showcarbyid.html.twig',array(
+               'car'=> $car));
+       }*/
     public function addAction(Request $request)
     {
         $classe = new classe();
@@ -87,6 +97,46 @@ class ClasseController extends Controller
 
 
     }
+
+
+    public function graphAction()
+    {
+        $em= $this->getDoctrine()->getManager();
+        $classes = $em->getRepository('ProjetBundle:Classe')->findAll();
+        $pieChart = new PieChart();
+        $queryx = $em->createQuery("SELECT classe.nomclasse ,classe.activite | length FROM ProjetBundle:Classe classe ");
+        $views = $queryx->getResult();
+
+
+
+        $pieChart->getData()->setArrayToDataTable($views,'nomclasse','activite | length');
+        $pieChart->getOptions()->setTitle('Nombres des activités par classe');
+        $pieChart->getOptions()->setHeight(500);
+        $pieChart->getOptions()->setWidth(900);
+        $pieChart->getOptions()->getTitleTextStyle()->setBold(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setColor('#009900');
+        $pieChart->getOptions()->getTitleTextStyle()->setItalic(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setFontName('Arial');
+        $pieChart->getOptions()->getTitleTextStyle()->setFontSize(20);
+
+        return $this->render('@Projet/Classe/chart.html.twig', array(
+            'classes' => $classes,
+            'piechart' => $pieChart,
+        ));
+    }
+    public function frontClasseAction(){
+        $em= $this->getDoctrine()->getManager();
+        $classe =$em->getRepository('ProjetBundle:Classe')->findAll();
+        return $this->render('@Projet/Classe/frontClasse.html.twig',array(
+            'classe'=> $classe));
+    }
+    public function showdetailClasseAction($id){
+        $em= $this->getDoctrine()->getManager();
+        $classe =$em->getRepository('ProjetBundle:Classe')->find($id);
+        return $this->render('@Projet/Classe/show_detailClasse.html.twig',array(
+            'classe'=> $classe));
+    }
+
 
 
 

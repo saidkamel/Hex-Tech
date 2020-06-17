@@ -22,10 +22,10 @@ class ClasseType extends AbstractType
                 'multiple'=>true,
                 'expanded'=>true,
             ))
-        ->add('Submit',SubmitType::class);
+            ->add('Submit',SubmitType::class);
     }/**
-     * {@inheritdoc}
-     */
+ * {@inheritdoc}
+ */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(

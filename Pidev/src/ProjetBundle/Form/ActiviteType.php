@@ -24,13 +24,10 @@ class ActiviteType extends AbstractType
                     'Dessin'=> 'Dessin',
                 ],
             ])
-
-
-
             ->add('Submit',SubmitType::class);
     }/**
-     * {@inheritdoc}
-     */
+ * {@inheritdoc}
+ */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(

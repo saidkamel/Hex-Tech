@@ -1,4 +1,4 @@
-{% extends'base-said.html.twig' %}
+{% extends'base-ala.html.twig' %}
 {% block headerTitle %}
     <section class="content-header">
         <h1>
@@ -17,7 +17,8 @@
     <tr>
         <th>ID</th>
         <th>Nom</th>
-		<th>Activite</th>
+        <th>Activités</th>
+        <th>nbActivités</th>
         <td>Supprimer</td>
         <td>Edit</td>
     </tr>
@@ -28,9 +29,11 @@
         <tr>
             <td>{{ classe.idclasse }}</td>
             <td>{{ classe.nomclasse }}</td>
-			 {%  for i in classe.active %}
-			<td>{{ i.nomactivite ~","}}</td>
-			{% endfor %}
+            <td> {%  for i in classe.activite %}
+                    {{ i.nomactivite ~","}}
+                {% endfor %}</td>
+            <td>{{classe.activite | length}}</td>
+
             <td><a href="{{ path('delete_classe',{'qdt': classe.idclasse }) }}" >Supprimer</a></td>
             <td><a href="{{ path('classe_edit',{'id': classe.idclasse }) }}" >Edit</a></td>
 
@@ -41,9 +44,18 @@
     <tr>
         <th>ID</th>
         <th>Nom</th>
+        <th>Activités</th>
+        <th>nbActivités</th>
         <td>Supprimer</td>
         <td>Edit</td>
     </tr>
     </tfoot>
+
+
+
+
+{% endblock %}
+
+{% block chart %}
 
 {% endblock %}

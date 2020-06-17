@@ -1,0 +1,38 @@
+{% extends'base-ala.html.twig' %}
+ {% block titre %}
+     <span class="logo-lg"><b>espace Parent</b></span>
+ {% endblock %}
+{% block navigateur %}
+{% endblock %}
+{% block headerTitle %}
+    <section class="content-header">
+        <h1>
+            Classes
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Classe</li>
+        </ol>
+    </section>
+{% endblock %}
+{% block dataTable %}
+    {%  for classe in classe %}
+
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3>{{ classe.nomclasse }}</h3>
+
+                    <p>{{classe.activite | length ~ " Activite" }}</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href={{ path('show_detailClasse',{'id': classe.idclasse }) }} class="small-box-footer">
+                    Voir detail <i class="fa fa-arrow-circle-right"></i>
+                </a>
+
+            </div>
+
+    {% endfor %}
+{% endblock %}

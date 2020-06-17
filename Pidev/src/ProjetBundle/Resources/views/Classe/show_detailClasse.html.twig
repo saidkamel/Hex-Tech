@@ -1,0 +1,32 @@
+{% extends'base-ala.html.twig' %}
+ {% block titre %}
+     <span class="logo-lg"><b>espace Parent</b></span>
+ {% endblock %}
+{% block navigateur %}
+{% endblock %}
+{% block headerTitle %}
+    <section class="content-header">
+        <h1>
+            Classes
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Classe</li>
+        </ol>
+    </section>
+{% endblock %}
+{% block dataTable %}
+
+    {{ "Classe: " ~ classe.nomclasse }}</br>
+    {{"Nombre des activites: " ~classe.activite | length}}
+    <p>Liste des activites</p>
+    {%  for i in classe.activite %}
+        </br>
+            {{ "Nom: " ~i.nomactivite}}</br>
+            {{  "Description: "~i.description}}</br>
+            {{  "Type: "~i.type}}</br>
+        {% endfor %}
+
+
+{% endblock %}

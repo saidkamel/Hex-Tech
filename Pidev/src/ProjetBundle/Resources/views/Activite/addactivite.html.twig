@@ -1,4 +1,4 @@
-{% extends'base-said.html.twig' %}
+{% extends'base-ala.html.twig' %}
 {% block formulaire %}
     <!-- Horizontal Form -->
     <div class="box box-info">
@@ -15,25 +15,38 @@
         <form class="form-horizontal">
             <div class="box-body">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Nom</label>
+                    <label class="col-sm-2 control-label"> {{ form_label(Form.nomactivite) }}</label>
 
                     <div class="col-sm-10">
-                        <input type="tex" class="form-control input-lg" id="nomactivite" placeholder="Nom">
+                        {{ form_widget(Form.nomactivite) }}
+                        <div class="form-error">
+                            {{ form_errors(Form.nomactivite) }}
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Description</label>
+                    <label class="col-sm-2 control-label">{{ form_label(Form.description) }}</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control input-lg" id="description" placeholder="Description">
+                        <div class="col-sm-10">
+                            {{ form_widget(Form.description) }}
+                            <div class="form-error">
+                                {{ form_errors(Form.description) }}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label  class="col-sm-2 control-label">Type</label>
+                    <label  class="col-sm-2 control-label">{{ form_label(Form.type) }}</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control input-lg" id="type" placeholder="Type">
-                        <!-- <button type="submit" class="btn btn-info pull-right">Ajouter</button>-->
+                        <div class="col-sm-10">
+                            {{ form_widget(Form.type) }}
+                            <div class="form-error">
+                                {{ form_errors(Form.type) }}
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

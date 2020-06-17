@@ -1,4 +1,4 @@
-{% extends'base-said.html.twig' %}
+{% extends'base-ala.html.twig' %}
 {% block headerTitle %}
     <section class="content-header">
         <h1>
@@ -46,4 +46,6 @@
         <td>Edit</td>
     </tr>
     </tfoot>
+    <button type="button" class="btn btn-block btn-primary" style="background-color:white;"><a href={{ path('toPDF') }}> telecharger comme pdf </a></button>
+
 {% endblock %}
