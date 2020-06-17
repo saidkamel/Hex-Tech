@@ -78,10 +78,10 @@ club_ajout:
     path:     /ajout
     defaults: { _controller: ProjetBundle:Club:ajout }
 club_delete:
-    path:     /delete/{id}
+    path:     /deleteC/{id}
     defaults: { _controller: ProjetBundle:Club:delete }
 club_update:
-    path:     /update/{id}
+    path:     /updateC/{id}
     defaults: { _controller: ProjetBundle:Club:update }
 club_search:
     path:     /list
@@ -236,7 +236,7 @@ new:
     path:     /new/{id}
     defaults: { _controller: ProjetBundle:Evenement:new }
 delete:
-    path:     /delete
+    path:     /deleteM
     defaults: { _controller: ProjetBundle:Evenement:delete }
 edit:
     path:     /participant/edit
@@ -248,3 +248,88 @@ all_Ev:
 #login:
  #   path:     /loginM/{username}/{password}
   #  defaults: { _controller: AppBundle:Mobile:login }
+#rchid
+Ut_homepage:
+    path:     /acceuil
+    defaults: { _controller: ProjetBundle:Acceuil:index }
+AD_homepage:
+    path:     /admin
+    defaults: { _controller: ProjetBundle:Acceuil:Admin }
+Enfant_home:
+    path:     /home
+    defaults: { _controller: ProjetBundle:Default:redirect }
+enfant_ajout:
+    path:     /ajoutE
+    defaults: { _controller: ProjetBundle:Enfant:ajout }
+enfant_ajout_UT:
+    path:     /ajoutUT
+    defaults: { _controller: ProjetBundle:Enfant:ajoutUT }
+enfant_search:
+    path:     /table
+    defaults: { _controller: ProjetBundle:Enfant:list }
+enfant_search_UT:
+    path:     /tableUT
+    defaults: { _controller: ProjetBundle:Enfant:listUT }
+enfant_delete:
+    path:     /deleteE/{id}
+    defaults: { _controller: ProjetBundle:Enfant:delete }
+enfant_delete_UT:
+    path:     /deleteUT/{id}
+    defaults: { _controller: ProjetBundle:Enfant:deleteUT }
+enfant_update:
+    path:     /updateE/{id}
+    defaults: { _controller: ProjetBundle:Enfant:update }
+enfant_update_UT:
+    path:     /updateUT/{id}
+    defaults: { _controller: ProjetBundle:Enfant:updateUT }
+EmploiDuTemps_ajout:
+    path:     /ajoutEm
+    defaults: { _controller: ProjetBundle:EmploiDuTemps:ajout }
+EmploiDuTemps_search:
+    path:     /tableEm
+    defaults: { _controller: ProjetBundle:EmploiDuTemps:search }
+EmploiDuTemps_search_UT:
+    path:     /tableEmut
+    defaults: { _controller: ProjetBundle:EmploiDuTemps:searchUT }
+Afficher_Emploi:
+    path:     /tableEmm
+    defaults: { _controller: ProjetBundle:EmploiDuTemps:all}
+Afficher_Emploi_Mobile:
+    path:     /tableEmmobile
+    defaults: { _controller: ProjetBundle:EmploiDuTemps:AfficherAllEmploi}
+EmploiDuTemps_delete:
+    path:     /deleteEm/{id}
+    defaults: { _controller: ProjetBundle:EmploiDuTemps:delete }
+
+EmploiDuTemps_update:
+    path:     /updateEm/{id}
+    defaults: { _controller: ProjetBundle:EmploiDuTemps:update }
+
+Calendar_search:
+    path:     /Calendrier
+    defaults: { _controller: ProjetBundle:Calendrier:calendar }
+Calendar_search_UT:
+    path:     /CalendrierUT
+    defaults: { _controller: ProjetBundle:Calendrier:calendarUT }
+
+Enfant_All:
+    path:     /enfantall
+    defaults: { _controller: ProjetBundle:Enfant:all }
+Enfant_Alll:
+    path:     /taskss
+    defaults: { _controller: ProjetBundle:LoginJson:ShowUsersMobile }
+
+newenfant:
+    path:     /enfant/new
+    defaults: { _controller: ProjetBundle:Enfant:newenfant }
+
+DeleteEnfantAction:
+    path:     /enfant/DeleteEnfant/{id}
+    defaults: { _controller: ProjetBundle:Enfant:DeleteEnfant }
+
+ModifierEnfantAction:
+    path:     /enfant/ModifierEnfant/{id}
+    defaults: { _controller: ProjetBundle:Enfant:ModifierEnfant }
+esprit_homepage:
+    path:     /
+    defaults: { _controller: ProjetBundle:Default:index }

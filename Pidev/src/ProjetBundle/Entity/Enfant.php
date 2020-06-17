@@ -36,11 +36,21 @@ class Enfant
     private $prenom;
 
     /**
+     * Set nom
+     *
+     *   @param string $DateNaissance
+     *
+     * @return \ProjetBundle\Entity\Enfant
+     */
+
+
+    /**
      * @var \DateTime
      *
-     * @ORM\Column(name="DateNaissance", type="date", nullable=false)
+     * @ORM\Column(name="DateNaissance", type="date", unique=true)
      */
-    private $datenaissance;
+    private $DateNaissance;
+
 
     /**
      * @var integer
@@ -110,7 +120,7 @@ class Enfant
      */
     public function getDatenaissance()
     {
-        return $this->datenaissance;
+        return $this->DateNaissance;
     }
 
     /**
@@ -118,7 +128,7 @@ class Enfant
      */
     public function setDatenaissance($datenaissance)
     {
-        $this->datenaissance = $datenaissance;
+        $this->DateNaissance = $datenaissance;
     }
 
     /**
@@ -182,6 +192,16 @@ class Enfant
 
         return $difference->format('%y years, %m months, %d days old.');
     }
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    /**
+     * @ORM\ManyToOne(targetEntity="ProjetBundle\Entity\EmploiDuTemps", inversedBy="enfants")
+     * @ORM\JoinColumn(name="EmploiDuTemps_id", referencedColumnName="id")
+     */
+    public $EmploiDuTemps;
 
 }
 

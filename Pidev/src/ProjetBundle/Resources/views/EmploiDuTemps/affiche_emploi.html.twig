@@ -1,0 +1,88 @@
+{% extends 'base_admin-rchid.html.twig' %}
+{% block container %}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1 align="center">
+            Gestion Emploi Du Temps
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Gestion Emploi Du Temps</a></li>
+            <li class="active">Emploi Du Temps</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <p align="center"><img src=""></p>
+    <p align="center"><img src=""></p>
+    <section class="content">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Les Emploi Du temps</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                        <i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+
+                <!-- Default box -->
+
+                <div class="box-header with-border">
+
+
+                    <div class="box-tools">
+                        <form method="POST">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="nom" class="form-control pull-right" placeholder="Search">
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-default"><i class="fa fa-search" value="rechercher"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body">
+                    </div>
+                    <table class="table table-bordered table-hover">
+                        <tr>
+
+                            <th>Classe</th>
+                            <th>Emploi Du Temps</th>
+                            <th>Supprimer</th>
+
+                        </tr>
+
+                        {% for emploi in clubs %}
+                            <tr>
+                                <td>{{ emploi.classe }}</td>
+                                <td><img src="{{ asset('\images/' ~ emploi.image) }}" height="250px" width="250px"></td>
+                                <td><a href="{{ path('EmploiDuTemps_delete',{'id':emploi.id}) }}'"><span class="label label-danger">SUPPRIMER</span></a></td>
+
+                            </tr>
+
+
+                            <!-- /.box-body -->
+
+                            <!-- /.box -->
+                        {% endfor %}
+
+                    </table>
+                    <div class="col-xs-2">
+                            <li><a href="{{ path('EmploiDuTemps_ajout') }}"><i class="fa fa-circle-o"></i>Ajouter Emploi Du Temps</a></li>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,89 @@
+{% extends 'base-rchid.html.twig' %}
+{% block container %}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1 align="center">
+            Gestion Enfant
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Gestion Enfant</a></li>
+            <li class="active">Enfant Inscrit</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <p align="center"><img src=""></p>
+    <p align="center"><img src=""></p>
+    <section class="content">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Enfant inscrit</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                        <i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+
+                <!-- Default box -->
+
+                <div class="box-header with-border">
+
+
+                    <div class="box-tools">
+                        <form method="POST">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="nom" class="form-control pull-right" placeholder="Search">
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-default"><i class="fa fa-search" value="rechercher"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body">
+                    </div>
+                    <table class="table table-bordered table-hover">
+                        <tr>
+
+                            <th>NOM</th>
+                            <th>PRENOM</th>
+                            <th>DATE DE NAISSANCE</th>
+
+                            <th>MODIFIER</th>
+                            <th>SUPPRIMER</th>
+                        </tr>
+                        {% for enfant in enfants %}
+                            <tr>
+
+                                <td>{{ enfant.nom }}</td>
+                                <td>{{ enfant.prenom }}</td>
+                                <td>{{enfant.DateNaissance|date('d/m/Y')}}</td>
+
+                                <td><a href="{{ path('enfant_update_UT',{'id':enfant.id}) }}'"><span class="label label-success">MODIFIER</span></a></td>
+                                <td><a href="{{ path('enfant_delete_UT',{'id':enfant.id}) }}'"><span class="label label-danger">SUPPRIMER</span></a></td>
+                            </tr>
+
+
+                            <!-- /.box-body -->
+
+                            <!-- /.box -->
+                        {% endfor %}
+
+                    </table>
+                    <div class="col-xs-2">
+                        <li><a href="{{ path('enfant_ajout_UT') }}"><i class="fa fa-circle-o"></i> Ajouter un Enfant</a></li>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+{% endblock %}

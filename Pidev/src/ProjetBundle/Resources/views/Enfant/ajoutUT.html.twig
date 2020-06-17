@@ -1,0 +1,40 @@
+{% extends 'base-rchid.html.twig' %}
+{% block container %}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1 align="center">
+            Gestion Enfant
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Gestion Enfant</a></li>
+            <li class="active">Ajouter Enfant</li>
+        </ol>
+    </section>
+    <p align="center"><img src=""></p>
+    <p align="center"><img src=""></p>
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Ajouter Enfant</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                        <i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+
+                {{ form (form) }}
+
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}
