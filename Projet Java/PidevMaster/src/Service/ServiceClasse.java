@@ -70,7 +70,7 @@ public class ServiceClasse implements IClasse{
     }
     public void supprimerClasse(int id){
     
-    String requete = "delete from classe where idclasse = '" +id+ "'";
+    String requete = "delete from classe where id = '" +id+ "'";
         try {
             ste = con.createStatement();
             ste.executeUpdate(requete);
@@ -81,7 +81,7 @@ public class ServiceClasse implements IClasse{
         }
     }
     public void modifierClasse(int id,String nom){
-    String requete = "update Classe set nomClasse='"+nom+"' where idclasse = "+id+"";
+    String requete = "update Classe set nomClasse='"+nom+"' where id = "+id+"";
         try {
             ste=con.createStatement();
             ste.executeUpdate(requete);
@@ -192,7 +192,7 @@ public class ServiceClasse implements IClasse{
     }
     public void setEnfantVide(int id)
 {
-String requete = "UPDATE `enfant` SET idclasse=1  WHERE idclasse= " +id;
+String requete = "UPDATE `enfant` SET id=1  WHERE id= " +id;
 PreparedStatement st;
         try {
            

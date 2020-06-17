@@ -104,7 +104,7 @@ public class ServiceEnfant implements IServiceEnfant<Enfant> {
       public String getNomClasse(int id){
     ObservableList<Classe> list = FXCollections.observableArrayList();
     
-    String requete = "select * from classe where idclasse="+id;
+    String requete = "select * from classe where id="+id;
      
             
        
@@ -137,8 +137,8 @@ public class ServiceEnfant implements IServiceEnfant<Enfant> {
                Enfant p = new Enfant(rs.getInt(1),
               rs.getString(2),
               rs.getString(3),
-               rs.getDate(4)
-               ,getNomClasse(rs.getInt(6))
+               rs.getDate(4),
+               getNomClasse(rs.getInt(6))
                );
                
                list.add(p);
@@ -291,7 +291,7 @@ public class ServiceEnfant implements IServiceEnfant<Enfant> {
 }
      public ObservableList<Enfant> getListEnfants1(){
         ObservableList<Enfant> list =FXCollections.observableArrayList();
-        String requete="SELECT enfant.*, classe.NomClasse FROM enfant,classe WHERE classe.IdClasse=enfant.idclasse";
+        String requete="SELECT enfant.*, classe.NomClasse FROM enfant,classe WHERE classe.id=enfant.idclasse";
         try {
             Statement st = con.createStatement();
            ResultSet rs =  st.executeQuery(requete);
@@ -301,7 +301,7 @@ public class ServiceEnfant implements IServiceEnfant<Enfant> {
                p.setNom(rs.getString(2)); 
                p.setPrenom(rs.getString(3));
                p.setDateNaissance(rs.getDate(4));
-               p.setNomclasse(rs.getString(7));
+               p.setNomclasse(rs.getString(9));
                
                list.add(p);
                

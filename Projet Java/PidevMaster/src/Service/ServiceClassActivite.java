@@ -58,7 +58,7 @@ public class ServiceClassActivite implements IClasseActivite{
     public ObservableList<Activite> getListClasse(int classe){
     ObservableList<Activite> list = FXCollections.observableArrayList();
 
-    String requete =  "select a.idactivite,a.nomactivite,a.description, a.type FROM classe c join activite a JOIN classeactivite ca ON ca.IdClasse=c.idclasse and ca.IdActivite=a.IdActivite and c.idclasse="+classe;
+    String requete =  "select a.id,a.nomactivite,a.description, a.type FROM classe c join activite a JOIN classeactivite ca ON ca.IdClasse=c.id and ca.IdActivite=a.Id and c.id="+classe;
      
             
        
@@ -84,7 +84,7 @@ public class ServiceClassActivite implements IClasseActivite{
     }
 public List<String> getMail(int idclass) throws SQLException
 { List<String> mail= new ArrayList<>();
-String requete = "select p.email from parent p,enfant e, classe c where p.id=e.idparent and c.idclasse = e.idclasse and c.idclasse= "+idclass;
+String requete = "select p.email from parent p,enfant e, classe c where p.id=e.idparent and c.id = e.idclasse and c.id= "+idclass;
         PreparedStatement pst;
          pst = con.prepareStatement(requete);
             ResultSet rs = pst.executeQuery();

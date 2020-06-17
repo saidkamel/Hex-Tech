@@ -39,7 +39,8 @@ public class PidevMaster {
        /*User u = new User("said.kamel@esprit.tn","12345678","employe");
        User_service us = new User_service();
        us.ajouterUser(u);*/
-      
+      ServiceEnfant s = new ServiceEnfant();
+      s.getListEnfants1();
             //System.out.println(es.getListClasse(5));
        
                

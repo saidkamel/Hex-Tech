@@ -95,7 +95,7 @@ public class ServiceActivite implements IActivite{
     }
     public void supprimerActivite(int id) {
 
-        String requete = "delete from activite where idactivite = '" + id + "'";
+        String requete = "delete from activite where id = '" + id + "'";
         try {
             ste = con.createStatement();
             ste.executeUpdate(requete);
@@ -106,7 +106,7 @@ public class ServiceActivite implements IActivite{
     }
 
     public void modifierActivite(int id, String nom, String desc, String type) {
-        String requete = "update activite set nomactivite='" + nom + "',description='" + desc + "',type='" + type + "' where idactivite = " + id + "";
+        String requete = "update activite set nomactivite='" + nom + "',description='" + desc + "',type='" + type + "' where id = " + id + "";
         try {
             ste = con.createStatement();
             ste.executeUpdate(requete);
@@ -168,7 +168,7 @@ public class ServiceActivite implements IActivite{
 }
     public List<String> getListActivite3(){
         List<String> list = new ArrayList<>();
-        String requete="select nomactivite from activite where (select count(*) from classeactivite where activite.idactivite=classeactivite.idactivite) = 0";
+        String requete="select nomactivite from activite where (select count(*) from classeactivite where activite.id=classeactivite.idactivite) = 0";
         try {
             Statement st = con.createStatement();
            ResultSet rs =  st.executeQuery(requete);
