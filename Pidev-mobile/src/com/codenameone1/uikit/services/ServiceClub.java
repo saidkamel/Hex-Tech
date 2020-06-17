@@ -6,34 +6,41 @@
 package com.codenameone1.uikit.services;
 
 
+import com.codename1.components.InfiniteProgress;
 import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.events.ActionListener;
 import com.codenameone1.uikit.utils.Statics;
 import com.codenameone1.uikit.entities.Club;
-import com.codenameone1.uikit.entities.Inscription;
+import com.codenameone1.uikit.entities.Subscription;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
  *
- * @author bhk
+ * @author mekki
  */
 public class ServiceClub {
 
     public ArrayList<Club> tasks;
-    public ArrayList<Inscription> inscription;
+    public ArrayList<Subscription> subscription;
+    public Map<String, Object> h = null;
     
     public static ServiceClub instance=null;
     public boolean resultOK;
     private ConnectionRequest req;
 
-    private ServiceClub() {
+    public ServiceClub() {
          req = new ConnectionRequest();
     }
 
@@ -44,8 +51,8 @@ public class ServiceClub {
         return instance;
     }
 
-    public boolean addClub(Inscription i) {
-        String url = Statics.BASE_URL + "/tasks/new?nomEnfant="+i.getNomEnfant()+"&Club="+ i.getClub(); 
+    public boolean addClub(Subscription i,int id) {
+        String url = Statics.BASE_URL + "/tasks/add/" + id + "?NomEnfant=" + i.getNomEnfant() ; 
         req.setUrl(url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
@@ -69,7 +76,7 @@ public class ServiceClub {
             for(Map<String,Object> obj : list){
                 Club c = new Club();
                 float id = Float.parseFloat(obj.get("id").toString());
-                c.setId((int)id);
+            c.setId((int)id);
                 c.setNom(obj.get("nom").toString());
                 c.setDescription(obj.get("description").toString());
                 tasks.add(c);
@@ -96,9 +103,9 @@ public class ServiceClub {
         NetworkManager.getInstance().addToQueueAndWait(req);
         return tasks;
     }
-    public boolean Supprimer(Inscription p ) {
+    public boolean Supprimer(int id ) {
          
-        String url = Statics.BASE_URL + "/delete?id=" + p.getId()  ;
+        String url = Statics.BASE_URL + "/tasks/deleteuser/"+ id;
         req.setUrl(url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
@@ -110,41 +117,87 @@ public class ServiceClub {
         NetworkManager.getInstance().addToQueueAndWait(req);
         return resultOK;
     }
-    public ArrayList<Inscription> parseClubs(String jsonText){
+    public ArrayList<Subscription> parseClubs(String jsonText){
+  
         try {
-            inscription=new ArrayList<>();
+            subscription=new ArrayList<>();
             JSONParser j = new JSONParser();
             Map<String,Object> tasksListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
             
-            List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
+           
+           List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
             for(Map<String,Object> obj : list){
-                Inscription c = new Inscription();
-                float id = Float.parseFloat(obj.get("id").toString());
-                c.setId((int)id);
-                c.setNomEnfant(obj.get("nomEnfant").toString());
-                c.setClub(obj.get("Club").toString());
-                inscription.add(c);
+                Subscription s = new Subscription();
+                
+                 int id = (int)Float.parseFloat(obj.get("id").toString());
+            s.setId((int)id);
+                String nomEnfant = obj.get("nomEnfant").toString();
+               float idclub = Float.parseFloat(((Map)obj.get("Club")).get("id").toString());
+               String nomC= ((Map)obj.get("Club")).get("nom").toString();
+               s.setNomC(nomC);
+               
+                subscription.add(new Subscription(id, nomEnfant, nomC));
             }
+            
             
             
         } catch (IOException ex) {
             
         }
-        return inscription;
-    }
+        return subscription;
+    } 
+
     
-    public ArrayList<Inscription> getMyClubs(){
-        String url = Statics.BASE_URL+"/tasks/inscription";
+    
+    public ArrayList<Subscription> getMyClubs(){
+        String url = Statics.BASE_URL+"/tasks/showallsub";
         req.setUrl(url);
         req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
-                inscription = parseClubs(new String(req.getResponseData()));
+                subscription = parseClubs(new String(req.getResponseData()));
                 req.removeResponseListener(this);
             }
         });
         NetworkManager.getInstance().addToQueueAndWait(req);
-        return inscription;
+        return subscription;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ /*   public Map<String, Object> getResponse(String url) {
+        url = "http://127.0.0.1:8000" + url;
+        System.out.println(url);
+        ConnectionRequest r = new ConnectionRequest();
+        r.setUrl(url);
+        //r.setPost(false);
+
+        InfiniteProgress prog = new InfiniteProgress();
+        Dialog dlg = prog.showInifiniteBlocking();
+        r.setDisposeOnCompletion(dlg);
+        r.addResponseListener((evt) -> {
+            try {
+                //Logger.getLogger(MyApplication.class.getName()).log(Level.SEVERE, null, ex);
+
+                JSONParser p = new JSONParser();
+                Reader targetReader = new InputStreamReader(new ByteArrayInputStream(r.getResponseData()));
+                h = p.parseJSON(targetReader);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
+        });
+        NetworkManager.getInstance().addToQueueAndWait(r);
+        return h;
+    } */
 }
+

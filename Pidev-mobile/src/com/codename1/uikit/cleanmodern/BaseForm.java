@@ -37,7 +37,7 @@ import com.codename1.ui.plaf.Style;
 import com.codename1.ui.util.Resources;
 import com.codenameone1.uikit.gui.ListClub;
 import com.codenameone1.uikit.gui.ListEvenement;
-import com.codenameone1.uikit.gui.supprimer;
+
 import com.codenameone1.uikit.gui.ListInscription;
 import com.codenameone1.uikit.gui.ListParticipantForm;
 import com.codenameone1.uikit.gui.SubscribeForm;
@@ -100,10 +100,10 @@ public class BaseForm extends Form {
         tb.addMaterialCommandToSideMenu("Consult Club List ", FontImage.MATERIAL_UPDATE, e -> new ListClub(res).show());
         tb.addMaterialCommandToSideMenu("Consult participants ", FontImage.MATERIAL_UPDATE, e -> new ListParticipantForm(res).show());
         tb.addMaterialCommandToSideMenu("Consult events", FontImage.MATERIAL_UPDATE, e -> new ListEvenement(res).show());
-        tb.addMaterialCommandToSideMenu("Subscribe ", FontImage.MATERIAL_UPDATE, e -> new SubscribeForm(res).show());
+       // tb.addMaterialCommandToSideMenu("Subscribe ", FontImage.MATERIAL_UPDATE, e -> new SubscribeForm(res).show());
         tb.addMaterialCommandToSideMenu("Consult My Club", FontImage.MATERIAL_UPDATE, e -> new ListInscription(res).show());
         tb.addMaterialCommandToSideMenu("Consulter liste des profils medicale", FontImage.MATERIAL_UPDATE, e -> new listProfil(res).show());
-        tb.addMaterialCommandToSideMenu("Delete", FontImage.MATERIAL_UPDATE, e -> new supprimer(res).show());
+        //tb.addMaterialCommandToSideMenu("Delete", FontImage.MATERIAL_UPDATE, e -> new supprimer(res).show());
         tb.addMaterialCommandToSideMenu("Contact Event manager", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new SignInForm(res).show());
         

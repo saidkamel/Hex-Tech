@@ -5,19 +5,39 @@
  */
 package com.codenameone1.uikit.entities;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  *
  * @author mekki
  */
-public class Club {
-    private int id;
+public class Club implements Serializable
+{   
+    private Integer id;
     private String nom, description;
+
     
     public Club(int id, String nom, String description) {
         this.id = id;
         this.nom = nom;
         this.description = description;
     }
+
+    public Club(String nom) {
+        this.nom = nom;
+    }
+    
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+ 
 
     public Club(String nom, String description) {
         this.nom = nom;
@@ -27,9 +47,7 @@ public class Club {
     public Club() {
     }
 
-    public int getId() {
-        return id;
-    }
+ 
 
     public void setId(int id) {
         this.id = id;
