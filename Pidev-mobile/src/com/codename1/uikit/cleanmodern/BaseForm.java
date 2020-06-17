@@ -19,6 +19,7 @@
 
 package com.codename1.uikit.cleanmodern;
 
+import com.codenameone1.uikit.gui.Acceuil;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
@@ -41,6 +42,7 @@ import com.codenameone1.uikit.gui.ListInscription;
 import com.codenameone1.uikit.gui.ListParticipantForm;
 import com.codenameone1.uikit.gui.SubscribeForm;
 import com.codenameone1.uikit.gui.listProfil;
+import com.codenameone1.uikit.gui.Acceuil;
 
 
 /**
@@ -91,6 +93,9 @@ public class BaseForm extends Form {
                 FlowLayout.encloseCenterBottom(
                         new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond"))
         ));
+        
+        tb.addMaterialCommandToSideMenu("Enfant", FontImage.MATERIAL_UPDATE, e -> new Acceuil(res).show()); 
+        //tb.addMaterialCommandToSideMenu("Profile du tuteur", FontImage.MATERIAL_SETTINGS, e -> new Profil_Ut(res).show());
         
         tb.addMaterialCommandToSideMenu("Consult Club List ", FontImage.MATERIAL_UPDATE, e -> new ListClub(res).show());
         tb.addMaterialCommandToSideMenu("Consult participants ", FontImage.MATERIAL_UPDATE, e -> new ListParticipantForm(res).show());
