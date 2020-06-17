@@ -34,29 +34,30 @@ import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.util.Resources;
-import com.codenameone1.uikit.entities.User;
-import com.codenameone1.uikit.utils.UserSession;
+import com.codename1.messaging.Message;
+import static com.codename1.ui.Component.BOTTOM;
+
 
 /**
  * The user profile form
  *
  * @author Shai Almog
  */
-public class ProfileForm extends BaseForm {
+public class Profile1Form extends BaseForm {
 
-    public ProfileForm(Resources res) {
+    public Profile1Form(Resources res) {
         super("Newsfeed", BoxLayout.y());
         Toolbar tb = new Toolbar(true);
         setToolbar(tb);
         getTitleArea().setUIID("Container");
-        setTitle("Profile");
+        setTitle("Event Manager");
         getContentPane().setScrollVisible(false);
         
         super.addSideMenu(res);
         
     
         
-        Image img = res.getImage("profile-background.jpg");
+        Image img = res.getImage("learn.png");
         if(img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
             img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);
         }
@@ -75,23 +76,22 @@ public class ProfileForm extends BaseForm {
                     GridLayout.encloseIn(3, 
                             facebook,
                             FlowLayout.encloseCenter(
-                                new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond")),
+                                new Label(res.getImage("mondherma9sous.jpg"), "PictureWhiteBackgrond")),
                             twitter
                     )
                 )
-        ));
-        User u = UserSession.getU();
-        TextField username = new TextField(u.getUsername());
-        username.setUIID("TextFieldBlack");
-        addStringValue("Username", username);
+        )); 
 
-        TextField email = new TextField(u.getEmail(), "E-Mail", 20, TextField.EMAILADDR);
+        TextField username = new TextField("Mondher");
+        username.setUIID("TextFieldBlack");
+        addStringValue("Name of Manager", username);
+
+        TextField email = new TextField("mondher.mallek1@esprit.tn", "E-Mail", 20, TextField.EMAILADDR);
         email.setUIID("TextFieldBlack");
         addStringValue("E-Mail", email);
         
-        TextField password = new TextField("ala", "Password", 20, TextField.PASSWORD);
-        password.setUIID("TextFieldBlack");
-        addStringValue("Password", password);
+      
+    
 
         CheckBox cb1 = CheckBox.createToggle(res.getImage("on-off-off.png"));
         cb1.setUIID("Label");
@@ -100,8 +100,14 @@ public class ProfileForm extends BaseForm {
         cb2.setUIID("Label");
         cb2.setPressedIcon(res.getImage("on-off-on.png"));
         
-        addStringValue("Facebook", FlowLayout.encloseRightMiddle(cb1));
-        addStringValue("Twitter", FlowLayout.encloseRightMiddle(cb2));
+     
+        
+        
+      Message m = new Message("Body of message");
+      Display.getInstance().sendMessage(new String[] {""}, "Subject of message", m);
+        
+        
+        
     }
     
     private void addStringValue(String s, Component v) {

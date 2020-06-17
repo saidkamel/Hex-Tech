@@ -95,16 +95,16 @@ public class BaseForm extends Form {
         ));
         
         tb.addMaterialCommandToSideMenu("Enfant", FontImage.MATERIAL_UPDATE, e -> new Acceuil(res).show()); 
-        //tb.addMaterialCommandToSideMenu("Profile du tuteur", FontImage.MATERIAL_SETTINGS, e -> new Profil_Ut(res).show());
-        
-        tb.addMaterialCommandToSideMenu("Consult Club List ", FontImage.MATERIAL_UPDATE, e -> new ListClub(res).show());
-        tb.addMaterialCommandToSideMenu("Consult participants ", FontImage.MATERIAL_UPDATE, e -> new ListParticipantForm(res).show());
+        tb.addMaterialCommandToSideMenu("Consult classes ", FontImage.MATERIAL_UPDATE, e -> new ListParticipantForm(res).show());
+        tb.addMaterialCommandToSideMenu("Consult activités", FontImage.MATERIAL_UPDATE, e -> new ListEvenement(res).show());
         tb.addMaterialCommandToSideMenu("Consult events", FontImage.MATERIAL_UPDATE, e -> new ListEvenement(res).show());
-       // tb.addMaterialCommandToSideMenu("Subscribe ", FontImage.MATERIAL_UPDATE, e -> new SubscribeForm(res).show());
-        tb.addMaterialCommandToSideMenu("Consult My Club", FontImage.MATERIAL_UPDATE, e -> new ListInscription(res).show());
+        tb.addMaterialCommandToSideMenu("Contact Event manager", FontImage.MATERIAL_SETTINGS, e -> new Profile1Form(res).show());
+        tb.addMaterialCommandToSideMenu("Consult participants ", FontImage.MATERIAL_UPDATE, e -> new ListParticipantForm(res).show());
         tb.addMaterialCommandToSideMenu("Consulter liste des profils medicale", FontImage.MATERIAL_UPDATE, e -> new listProfil(res).show());
-        //tb.addMaterialCommandToSideMenu("Delete", FontImage.MATERIAL_UPDATE, e -> new supprimer(res).show());
-        tb.addMaterialCommandToSideMenu("Contact Event manager", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
+        tb.addMaterialCommandToSideMenu("Consult Club List ", FontImage.MATERIAL_UPDATE, e -> new ListClub(res).show());
+        tb.addMaterialCommandToSideMenu("Consult My Club", FontImage.MATERIAL_UPDATE, e -> new ListInscription(res).show());
+        tb.addMaterialCommandToSideMenu("Send mail au tuteur", FontImage.MATERIAL_MAIL, e -> new MailForm(res).show());
+        tb.addMaterialCommandToSideMenu("See my profile", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new SignInForm(res).show());
         
          BaseForm current;
