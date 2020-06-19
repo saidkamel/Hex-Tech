@@ -19,7 +19,7 @@ class DefaultController extends Controller
         if($authChecker->isGranted('ROLE_ADMIN')){
             return $this->redirecttoRoute("projet_homepage");
         } elseif ($authChecker->isGranted('ROLE_PARENT')){
-            return $this->redirecttoRoute("show_front");
+            return $this->redirecttoRoute("Ut_homepage");
 
         }
         elseif ($authChecker->isGranted('ROLE_USER')){

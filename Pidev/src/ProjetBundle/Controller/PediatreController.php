@@ -112,4 +112,12 @@ class PediatreController extends Controller
             return new Response(json_encode($result));
         }*/
 
+    public function testAction()
+    {
+
+
+return $this->render('@Projet/Pediatre/accueil-back.html.twig');
+
+    }
+
 }

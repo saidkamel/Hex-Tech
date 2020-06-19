@@ -1,0 +1,32 @@
+{% extends 'back-jihed.html.twig' %}
+
+{% block content %}
+    <center>
+
+<div class="col-xs-9" style="padding-left: 300px">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Ajouter un Jardin</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+            <br>
+            <input type="submit" value="Create" class="btn btn-success btn-lg btn-block" />
+            {{ form_end(form) }}
+
+            <br>
+
+                <ul style="list-style-type: none;">
+                    <li>
+                        <a href="{{ path('jardin_index') }}" class="btn btn-info btn-lg btn-block" style="width: 25%">Retour à la liste</a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+</div>
+    </center>
+{% endblock %}
+

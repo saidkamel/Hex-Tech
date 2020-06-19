@@ -58,7 +58,7 @@
                         {% for emploi in clubs %}
                             <tr>
                                 <td>{{ emploi.classe }}</td>
-                                <td><img src="{{ asset('\images/' ~ emploi.image) }}" height="250px" width="250px"></td>
+                                <td><img src="{{ asset('img/' ~ emploi.image) }}" height="250px" width="250px"></td>
                                 <td><a href="{{ path('EmploiDuTemps_delete',{'id':emploi.id}) }}'"><span class="label label-danger">SUPPRIMER</span></a></td>
 
                             </tr>

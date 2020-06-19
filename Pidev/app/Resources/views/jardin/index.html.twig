@@ -1,0 +1,142 @@
+{% extends 'back-jihed.html.twig' %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ asset('bundles/adesignscalendar/css/fullcalendar/fullcalendar.css') }}" />
+    <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-1.8.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/jquery.fullcalendar.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.filterable .btn-filter').click(function(){
+                var $panel = $(this).parents('.filterable'),
+                    $filters = $panel.find('.filters input'),
+                    $tbody = $panel.find('.table tbody');
+                if ($filters.prop('hidden') == true) {
+                    $filters.prop('hidden', false);
+                    $filters.first().focus();
+                } else {
+                    $filters.val('').prop('hidden', true);
+                    $tbody.find('.no-result').remove();
+                    $tbody.find('tr').show();
+                }
+            });
+
+            $('.filterable .filters input').keyup(function(e){
+                /* Ignore tab key */
+                var code = e.keyCode || e.which;
+                if (code == '9') return;
+                /* Useful DOM data and selectors */
+                var $input = $(this),
+                    inputContent = $input.val().toLowerCase(),
+                    $panel = $input.parents('.filterable'),
+                    column = $panel.find('.filters th').index($input.parents('th')),
+                    $table = $panel.find('.table'),
+                    $rows = $table.find('tbody tr');
+                /* Dirtiest filter function ever 😉 */
+                var $filteredRows = $rows.filter(function(){
+                    var value = $(this).find('td').eq(column).text().toLowerCase();
+                    return value.indexOf(inputContent) === -1;
+                });
+                /* Clean previous no-result if exist */
+                $table.find('tbody .no-result').remove();
+                /* Show all rows, hide filtered ones (never do that outside of a demo ! xD) */
+                $rows.show();
+                $filteredRows.hide();
+                /* Prepend no-result row if all rows are filtered */
+                if ($filteredRows.length === $rows.length) {
+                    $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="'+ $table.find('.filters th').length +'">No result found</td></tr>'));
+                }
+            });
+        });
+    </script>
+<div class="panel panel-primary filterable">
+<div class="col-xs-12">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Listes des Jardins </h3>
+            <div class="pull-right">
+                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table id="example2 bootstrap-data-table" class="table table-striped table-bordered table-hover">
+
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Capacite</th>
+                <th>Localisation</th>
+                <th>Num</th>
+                <th>Mail</th>
+                <th>Activite</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+            <tr class="filters">
+                <th><input type="text" class="form-control" placeholder="#" hidden></th>
+                <th><input type="text" class="form-control"  hidden></th>
+                <th><input type="text" class="form-control"  hidden></th>
+                <th><input type="text" class="form-control"  hidden></th>
+                <th><input type="text" class="form-control"  hidden></th>
+                <th><input type="text" class="form-control"  hidden></th>
+                <th><input type="text" class="form-control"  hidden></th>
+
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for jardin in jardins %}
+            <tr>
+                <td><a href="{{ path('jardin_show', { 'id': jardin.id }) }}">{{ jardin.id }}</a></td>
+                <td>{{ jardin.nom }}</td>
+                <td>{{ jardin.capacite }}</td>
+                <td>{{ jardin.localisation }}</td>
+                <td>{{ jardin.num }}</td>
+                <td>{{ jardin.mail }}</td>
+                <td>{{ jardin.activite }}</td>
+                <td><img src="{{ asset('uploads/images/'~ jardin.image )}}" width="200" height="200"></td>
+
+                <td>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="{{ path('jardin_show', { 'id': jardin.id }) }}" class="btn btn-primary btn-sm">show</a>
+                            <a href="{{ path('jardin_edit', { 'id': jardin.id }) }}" class="btn btn-success btn-sm">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<br>
+            <center>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <a href="{{ path('jardin_new') }}" class="btn btn-block btn-primary btn-lg" style="width: 30%">Créer un nouveau Jardin</a>
+                    </li>
+                </ul>
+            </center>
+            <br>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="panel panel-primary filterable">
+    <div class="col-xs-12">
+        <div class="box">
+            <div id="div_chart"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        {{ gc_draw(piechart, 'div_chart') }}
+    </script>
+        </div></div></div>
+{% endblock %}

@@ -3,6 +3,134 @@
      <span class="logo-lg"><b>espace Parent</b></span>
  {% endblock %}
 {% block navigateur %}
+    <ul class="sidebar-menu" data-widget="tree">
+                <li class="header">MAIN NAVIGATION</li>
+                <li class="treeview">
+
+                <li><a href="{{ path('Ut_homepage') }}">
+                        <i class="fa fa-home"></i>
+                        <span>Acceuil</span>
+                        <span class="pull-right-container">
+                        <span class="label label-primary pull-right">1</span>
+            </span>
+                    </a></li>
+
+
+
+                </li>
+                <ul class="sidebar-menu" data-widget="tree">
+
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i>
+                            <span>CLUB</span>
+                            <span class="pull-right-container">
+                        <span class="label label-primary pull-right">3</span>
+            </span>
+                        </a>
+
+
+
+
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('club_user') }}"><i class="fa fa-circle-o"></i> Consulter les Club </a></li>
+                            <li><a href="{{ path('club_subscription') }}"><i class="fa fa-circle-o"></i> S'incrire</a></li>
+                            <li><a href="{{ path('user_club') }}"><i class="fa fa-circle-o"></i> Consulter mes Club</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>Participant</span>
+                            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('participant_AfficheE')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                            <li><a href="{{ path('participant_RechercheE')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+                            <li><a href="{{ path('participant_Mail')}}"><i class="fa fa-circle-o"></i> Mail</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Profil medicale</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li ><a href="{{ path('show_front') }}"><i class="fa fa-circle-o"></i> Show Profil medicale</a></li>
+
+                    </ul>
+
+
+
+
+                <li class=" treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Classe</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+
+                    <ul class="treeview-menu">
+                        <li ><a href="{{ path('frontClasse') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-child"></i>
+                        <span>Gestion Enfant</span>
+                        <span class="pull-right-container">
+                        <span class="label label-primary pull-right">2</span>
+            </span>
+                    </a>
+
+
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('enfant_search_UT') }}"><i class="fa fa-circle-o"></i> Consulter Enfant </a></li>
+                        <li><a href="{{ path('enfant_ajout_UT') }}"><i class="fa fa-circle-o"></i> Ajouter un Enfant</a></li>
+
+
+
+                    </ul>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-table"></i>
+                        <span>Gestion Emploi du temps</span>
+                        <span class="pull-right-container">
+                        <span class="label label-primary pull-right">3</span>
+            </span>
+                    </a>
+
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('EmploiDuTemps_search_UT') }}"><i class="fa fa-circle-o"></i> Consulter emploi du temps </a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                <li><a href="{{ path('Calendar_search_UT') }}">
+                        <i class="fa fa-calendar"></i>
+                        <span>Calendrier</span>
+                        <span class="pull-right-container">
+                        <span class="label label-primary pull-right">4</span>
+            </span>
+                    </a></li>
+
+                </li>
 {% endblock %}
 {% block headerTitle %}
     <section class="content-header">

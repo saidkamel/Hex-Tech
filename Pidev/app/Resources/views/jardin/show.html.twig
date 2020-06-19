@@ -1,0 +1,68 @@
+{% extends 'back-jihed.html.twig' %}
+
+{% block content %}
+<center>
+
+    <div class="col-xs-9" style="padding-left: 300px">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Modifier un Jardin</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+
+                <table id="example2" class="table table-bordered table-hover">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ jardin.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ jardin.nom }}</td>
+            </tr>
+            <tr>
+                <th>Capacite</th>
+                <td>{{ jardin.capacite }}</td>
+            </tr>
+            <tr>
+                <th>Localisation</th>
+                <td>{{ jardin.localisation }}</td>
+            </tr>
+            <tr>
+                <th>Num</th>
+                <td>{{ jardin.num }}</td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td>{{ jardin.mail }}</td>
+            </tr>
+            <tr>
+                <th>Activite</th>
+                <td>{{ jardin.activite }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ asset('uploads/images/'~ jardin.image )}}" width="200" height="200"></td>
+            </tr>
+        </tbody>
+    </table>
+                <center>
+                    <ul style="list-style-type: none;">
+                        <br>
+
+                        <li >
+                            {{ form_start(delete_form) }}
+                            <a href="{{ path('jardin_index') }}" class="btn btn-block btn-info btn-sm" style="width: 25%">Retour à la liste</a>
+                            <a href="{{ path('jardin_edit', { 'id': jardin.id }) }}" class="btn btn-block btn-warning btn-sm" style="width: 25%">Modifier</a>
+                            <input type="submit" value="Supprimer" class="btn btn-block btn-danger btn-sm" style="width: 25%">
+                            {{ form_end(delete_form) }}
+                        </li>
+
+                    </ul>
+                </center>
+            </div>
+        </div>
+    </div>
+</center>
+{% endblock %}

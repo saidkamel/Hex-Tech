@@ -45,12 +45,12 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href={{ path('projet_homepage' )}} class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>P</b>NL</span>
             <!-- logo for regular state and mobile devices -->
             {% block titre %}
-          <span class="logo-lg"><b>Admin</b></span>
+                <span class="logo-lg"><b>espace Admin</b></span>
             {% endblock %}
         </a>
         <!-- Header Navbar: style can be found in header.less -->
@@ -76,7 +76,7 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="{{ asset('dist/img/ala.jpg') }}" class="img-circle" alt="User Image">
+                                                <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Support Team
@@ -265,7 +265,7 @@
 
                             <img src="{{ asset('dist/img/ala.jpg') }}"  class="img-circle" alt="User Image" class="wrapper" style="height: 30px; min-height: 30px;">
 
-                                <span class="hidden-xs">Ala Kamel</span>
+                                <span class="hidden-xs">{% block admin1 %}Admin{% endblock %}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -273,8 +273,10 @@
                                 <img src="{{ asset('dist/img/ala.jpg') }}"  class="img-circle" alt="User Image">
 
                                 <p>
-                                    Ala Kamel - Web Developer
-                                    <small>Member since Nov. 2012</small>
+
+                                   Admin
+
+
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -298,7 +300,7 @@
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="{{ path('fos_user_security_logout')|trans }}" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -321,7 +323,10 @@
                     <img src="{{ asset('dist/img/ala.jpg')}}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Ala Kamel</p>
+                    {% block admin2 %}
+                        <p>Admin</p>
+                    {% endblock %}
+
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -340,15 +345,16 @@
             {% block navigateur %}
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active treeview">
+                <li class=" active treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Activite</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
+
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{ path('Add_Activite') }}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
+                        <li ><a href="{{ path('Add_Activite') }}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
                         <li><a href="{{ path('Show_Activite') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
                     </ul>
                 </li>
@@ -364,7 +370,127 @@
                         <li><a href="{{ path('Show_Classe') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Pediatre</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="{{ path('Add_Pediatre') }}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
+                        <li><a href="{{ path('Show_Pediatre') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Profil Medicale</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="{{ path('Add_Profil') }}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
+                        <li><a href="{{ path('Show_Profil') }}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                    </ul>
+                </li>
 
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-files-o"></i>
+                        <span>CLUB</span>
+                        <span class="pull-right-container">
+                        <span class="label label-primary pull-right">5</span>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('club_search') }}"><i class="fa fa-circle-o"></i> Consulter les Club </a></li>
+                        <li><a href="{{ path('club_ajout') }}"><i class="fa fa-circle-o"></i> Ajouter un Club</a></li>
+                        <li><a href="{{ path('media_ajout') }}"><i class="fa fa-circle-o"></i> Ajouter Media</a></li>
+                        <li><a href="{{ path('media_aff') }}"><i class="fa fa-circle-o"></i> Consulter Media</a></li>
+                        <li><a href="{{ path('admin_club') }}"><i class="fa fa-circle-o"></i> Consulter les Inscription </a></li>
+                    </ul>
+                </li>
+
+
+                <li class=" treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Evenement</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li class="active"><a href="{{ path('evenement_AjoutE')}}"><i class="fa fa-circle-o"></i> Ajouter</a></li>
+                        <li><a href="{{ path('evenement_AfficherE')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                        <li><a href="{{ path('evenement_RechercheE')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+                        <li><a href="{{ path('evenement_Mail')}}"><i class="fa fa-circle-o"></i> Mail</a></li>
+
+                    </ul>
+                </li>
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class=" treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>Participant</span>
+                            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('evenement_AfficheP')}}"><i class="fa fa-circle-o"></i> Afficher</a></li>
+                            <li><a href="{{ path('evenement_RechercheP')}}"><i class="fa fa-circle-o"></i> Recherche</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-child"></i>
+                            <span>Gestion Enfant</span>
+                            <span class="pull-right-container">
+                        <span class="label label-primary pull-right">2</span>
+            </span>
+                        </a>
+
+
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('enfant_search') }}"><i class="fa fa-circle-o"></i> Consulter Enfant </a></li>
+                            <li><a href="{{ path('enfant_ajout') }}"><i class="fa fa-circle-o"></i> Ajouter un Enfant</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-table"></i>
+                            <span>Gestion Emploi du temps</span>
+                            <span class="pull-right-container">
+                        <span class="label label-primary pull-right">3</span>
+            </span>
+                        </a>
+
+
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('EmploiDuTemps_search') }}"><i class="fa fa-circle-o"></i> Consulter emploi du temps </a></li>
+                            <li><a href="{{ path('EmploiDuTemps_ajout') }}"><i class="fa fa-circle-o"></i> Ajouter emploi du temps</a></li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                    <li><a href="{{ path('Calendar_search') }}">
+                            <i class="fa fa-calendar"></i>
+                            <span>Calendrier</span>
+                            <span class="pull-right-container">
+                        <span class="label label-primary pull-right">4</span>
+            </span>
+                        </a></li>
+
+                    </li>
 
 
             </ul>
