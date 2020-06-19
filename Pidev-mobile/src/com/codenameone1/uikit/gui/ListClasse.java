@@ -25,13 +25,14 @@ import com.codename1.ui.util.Resources;
 import com.codenameone1.uikit.services.ServiceClasseActivite;
 import com.codename1.uikit.cleanmodern.BaseForm;
 import com.codenameone1.uikit.entities.Activite;
+import com.codenameone1.uikit.entities.classe;
 import java.util.ArrayList;
 
 
 public class ListClasse extends BaseForm{
 
     public ListClasse(Resources res) {
-        setTitle("List Activités");
+        setTitle("List classes");
         
         setLayout(BoxLayout.y());
            Toolbar tb = new Toolbar(true);
@@ -61,32 +62,36 @@ public class ListClasse extends BaseForm{
                     )
                 )
         ));
-       
-        SpanLabel titre = new SpanLabel("Listes des Activités");
+       /* SpanLabel sp = new SpanLabel();
+        sp.setText(ServiceParticipant.getInstance().getAllClasse().toString());
+        addAll(sp);*/
+        
+        SpanLabel titre = new SpanLabel("Classe: ");
         titre.getTextAllStyles().setFont(Font.createSystemFont(Font.FACE_SYSTEM, Font.STYLE_BOLD, Font.SIZE_LARGE));
         add(titre);
-        ArrayList<Activite> list = new ArrayList<>();
-        list=ServiceClasseActivite.getInstance().getAllActivite();
+        ArrayList<classe> list = new ArrayList<>();
+        list=ServiceClasseActivite.getInstance().getAllClasse();
         //sp.setText(ServiceParticipant.getInstance().getAllActivite().toString());
-        
-        for(Activite p:list)
-        {
-       Label sp = new Label();
-        sp.setText("."+p.getNom());
         //sp.getTextAllStyles().setFont(Font.createSystemFont(Font.FACE_SYSTEM, Font.STYLE_BOLD, Font.SIZE_LARGE));
-        addAll(sp);
-         float id=p.getId();
-        DetailActivite D = new DetailActivite(res,id);
-        sp.addPointerPressedListener((evt1)->{
+        int i =0;
+        for(classe p:list)
+        {
+            
+        Label nomC = new Label();
+        nomC.setText(String.valueOf(i+1)+"."+p.getNomClasse());
+        addAll(nomC);
+       
+       
+        
+        float id=p.getId();
+        DetailClasse D = new DetailClasse(res,id);
+        nomC.addPointerPressedListener((evt1)->{
        
         D.show();
         
         });
+        i++;
         }
-        
-        
-        
-        
         
 //        getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e-> previous.showBack());
     }

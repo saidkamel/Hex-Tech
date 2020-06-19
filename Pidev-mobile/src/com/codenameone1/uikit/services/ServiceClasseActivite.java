@@ -131,7 +131,7 @@ public class ServiceClasseActivite {
     }
     
     public ArrayList<classe> getAllClasse(){
-        String url = Statics.BASE_URL+"showclasseM";
+        String url = Statics.BASE_URL+"/showclasseM";
         req.setUrl(url);
         req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -175,7 +175,7 @@ public class ServiceClasseActivite {
     }
     
      public ArrayList<Activite> getAllActivite(){
-        String url = Statics.BASE_URL+"showclasseA";
+        String url = Statics.BASE_URL+"/showclasseA";
         req.setUrl(url);
         req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {

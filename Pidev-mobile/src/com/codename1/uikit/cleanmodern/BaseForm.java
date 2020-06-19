@@ -43,6 +43,8 @@ import com.codenameone1.uikit.gui.ListParticipantForm;
 import com.codenameone1.uikit.gui.SubscribeForm;
 import com.codenameone1.uikit.gui.listProfil;
 import com.codenameone1.uikit.gui.Acceuil;
+import com.codenameone1.uikit.gui.ListClasse;
+import com.codenameone1.uikit.gui.ListActivite;
 
 
 /**
@@ -95,8 +97,8 @@ public class BaseForm extends Form {
         ));
         
         tb.addMaterialCommandToSideMenu("Enfant", FontImage.MATERIAL_UPDATE, e -> new Acceuil(res).show()); 
-        tb.addMaterialCommandToSideMenu("Consult classes ", FontImage.MATERIAL_UPDATE, e -> new ListParticipantForm(res).show());
-        tb.addMaterialCommandToSideMenu("Consult activités", FontImage.MATERIAL_UPDATE, e -> new ListEvenement(res).show());
+        tb.addMaterialCommandToSideMenu("Consult classes ", FontImage.MATERIAL_UPDATE, e -> new ListClasse(res).show());
+        tb.addMaterialCommandToSideMenu("Consult activités", FontImage.MATERIAL_UPDATE, e -> new ListActivite(res).show());
         tb.addMaterialCommandToSideMenu("Consult events", FontImage.MATERIAL_UPDATE, e -> new ListEvenement(res).show());
         tb.addMaterialCommandToSideMenu("Contact Event manager", FontImage.MATERIAL_SETTINGS, e -> new Profile1Form(res).show());
         tb.addMaterialCommandToSideMenu("Consult participants ", FontImage.MATERIAL_UPDATE, e -> new ListParticipantForm(res).show());

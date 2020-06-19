@@ -2,6 +2,7 @@
 
 <resource majorVersion="1" minorVersion="10" useXmlUI="false">
     <image name="activation-background.jpg"  />
+    <image name="b834e55141ad7aeca6ad79f7c1400c55.jpg"  />
     <image name="background.jpg"  />
     <image name="background.png"  />
     <image name="confirmation-background.jpg"  />
@@ -111,8 +112,8 @@
         <font key="FloatingHint.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.5" />
         <val key="FloatingHint.transparency" value="0" />
         <val key="Form.bgColor" value="ffffff" />
-        <val key="Form.bgImage" value="background.png" />
-        <val key="Form.bgType" value="28" />
+        <val key="Form.bgImage" value="b834e55141ad7aeca6ad79f7c1400c55.jpg" />
+        <val key="Form.bgType" value="33" />
         <val key="Form.transparency" value="255" />
         <val key="ImageOverlay.bgColor" value="14134b" />
         <val key="ImageOverlay.transparency" value="60" />
